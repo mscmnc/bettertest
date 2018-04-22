@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>ChainList from ChainSkills</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Application -->
+  <link href="css/app.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+
+            <h1>Manage Token</h1>
+
+            <h3>You have <span class="black"><span id="balance"></span> BetterTOKEN</span> in your account, o pavadinimas yra <span id="displaysecret"></span> </h3>
+
+            <br>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="panel panel-default panel-primary">
+                        <div class="panel-heading">Send Token</div>
+                        <div class="panel-body">
+
+                            <form>
+                                <div class="form-group">
+                                    <label for="inputAmountSendToken">Amount in Token</label>
+                                    <input type="number" name="inputAmountSendToken" class="form-control"
+                                           id="zalius" placeholder="e.g., 95">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputBeneficiarySendToken">To (address)</label>
+                                    <input type="text" class="form-control" id="inputBeneficiarySendToken"
+                                           name="inputBeneficiarySendToken" placeholder="e.g. 0x123ABde44...">
+                                </div>
+                                <button type="button" class="btn btn-default" onclick="App.sendToken();return false;">
+                                    Send Token
+                                </button>
+                            </form>
+
+                        </div>
+                        <div class="panel-footer">Directly send a token from your address to another address.</div>
+                    </div>
+                    <div>
+                    <p id="account" class="welcome pull-right"></p>
+                    <p id="accountBalance" class="welcome pull-left"></p>
+                  </div>
+                </div>
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/web3.min.js"></script>
+  <script src="js/truffle-contract.js"></script>
+  <script src="js/apsp.js"></script>
+
+</body>
+
+</html>
