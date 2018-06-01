@@ -1,174 +1,491 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta name="description" content="BetterWorld charity platform">
+  <link href="https://fonts.googleapis.com/css?family=Palanquin:200" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>ChainList from ChainSkills</title>
 
-  <!-- Bootstrap -->
+  <title>BetterWorld platform</title>
+
   <link href="css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
-
-  <!-- Application -->
-  <link href="css/app.css" rel="stylesheet">
-
-
+  <link href="css/fullPage.min.css" rel="stylesheet">
+  <link href="css/jquery.fullPage.min.css" rel="stylesheet">
+  <link href="css/awesome.min.css" rel="stylesheet">
+  <link href="css/animate.min.css" rel="stylesheet">
+  <link href="css/page.css" rel="stylesheet">
 </head>
 
+<header id="header-fixed">
+      <div id="cssmenu">
+        <div id="left-side">
+          <h4>Your Balance: <span id="accountBalance"></span>, BetterTokens: <span id="tokenBalance"> </span> </h4>
+        </div>
+        <nav>
+          <a href="#" class="fb" title="Join us on Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          <a href="#" class="tw" title="Join us on Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          <a href="#" class="insta" title="Join us on Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          <a href="#" class="medium" title="Join us on Medium"><i class="fa fa-medium" aria-hidden="true"></i></a>
+          <a href="#" class="youtube" title="Join us on Youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+          <a href="#" class="github" title="Join us on Github"><i class="fa fa-github" aria-hidden="true"></i></a>
+          <a href="#" class="telegram" title="Join us on Telegram"><i class="fa fa-telegram" aria-hidden="true"></i></a>
+          <button type="button" class="btn btn-outline-main" data-toggle="modal" data-target="#registerModal">Whitelist</button>
+          <button type="button" class="btn btn-outline-main" data-toggle="modal" data-target="#loginModal">Login</button>
+        </nav>
+      </div>
+</header>
+
 <body>
-  <div class="container">
-    <div class="jumbotron text-center">
-      <h1>ChainList</h1>
-    </div>
+  <container id="fullpage">
 
-    <div class="col-md-12" id="article-list">
-      <div class="row">
-        <div class="col-lg-12">
-          <p id="account" class="welcome pull-right"></p>
-          <p id="accountBalance" class="welcome pull-left"></p>
-        </div>
-      </div>
-
-      <div class="row panel panel-default">
-        <div class="panel-heading clearfix">
-          <div class="panel-title">
-            <button class="btn btn-info btn-lg pull-left" data-toggle="collapse" data-target="#events" aria-expanded="false" aria-controls="events">Events</button>
-            <button class="btn btn-info btn-lg pull-right" data-toggle="modal" data-target="#sellArticle">Sell an article</button>
+      <section id="section1-background">
+          <div class="container-1">
+              <div class="wow fadeInRight">
+                <h1 id="welcome">WELCOME TO A BETTER WORLD! </h1>
+                  <div class="underline">token sale ends</div>
+                    <div class="countdowntimewrap"></div>
+                      <div id=countdown-wrap>
+                        <button type="button" onclick="#section4-background" class="big-button big-button2" >BUY TOKENS - 20% DISCOUNT </button>
+                          <div id="goal">$500,000</div>
+                            <div id="glass">
+                              <div id="dynamic" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                                <span id="current-progress"></span>
+                              </div>
+                            </div>
+                          <div class="goal-stat">
+                            <span class="goal-number">16%</span>
+                            <span class="goal-label">Funded</span>
+                          </div>
+                          <div class="goal-stat">
+                            <span class="goal-number">$1,640</span>
+                            <span class="goal-label">Raised</span>
+                          </div>
+                          <div class="goal-stat">
+                            <span class="goal-number"><div id="countdown"></div>8</span>
+                            <span class="goal-label">Days to Go</span>
+                          </div>
+                          <div class="goal-stat">
+                            <span class="goal-number">38</span>
+                            <span class="goal-label">Sponsors</span>
+                          </div>
+                      </div>
+              </div>
           </div>
+      </section>
+
+      <section id="section2-background">
+        <div>
+          <p id="app-intro">We are believe that together we can create a BETTER WORLD. Take a look at our Mobile App</p>
+              <div class="block-1">
+                  <div class="imgContainer imgContainer-mobile">
+                    <img src="/img/a/main-mobile.png" alt="Mobile-interface" style="width:30rem" >
+                  </div>
+                  <div class="imgContainer wow fadeInLeft">
+                    <img src="/img/a/balance.png" alt="Balance-interface" style="width:40rem" >
+                  </div>
+                  <div class="imgContainer donate-app wow fadeInRight">
+                    <img src="/img/a/donate.png" alt="Balance-interface" style="width:40rem" >
+                  </div>
+              </div>
+                  <div class="block-2">
+                     <div class="imgContainer-2 wow fadeInLeft">
+                       <img src="/img/a/inbox.png" alt="Inbox-interface" style="width:40rem" >
+                     </div>
+                     <div class="imgContainer-3 wow fadeInRight ">
+                       <img src="/img/a/my-donations.png" alt="Balance-interface" style="width:40rem" >
+                     </div>
+                  </div>
         </div>
-        <ul id="events" class="collapse list-group"></ul>
-      </div>
+      </section>
 
-      <div id="articlesRow" class="row">
-        <!-- ARTICLES LOAD HERE -->
-      </div>
-    </div>
-  </div>
-
-
-  <div id="articleTemplate" style="display: none;">
-    <div class="row-lg-12">
-      <div class="panel panel-default panel-article">
-        <div class="panel-heading">
-          <h3 class="panel-title"></h3>
-        </div>
-        <div class="panel-body">
-          <strong>Description</strong>: <span class="article-description" id="status"></span><br/>
-          <strong>Price (ETH)</strong>: <span class="article-price"></span><br/>
-          <strong>Sold by</strong>: <span class="article-seller"></span><br/>
-        </div>
-        <div class="panel-footer">
-          <button type="button" class="btn btn-primary btn-success btn-buy" onclick="App.buyArticle(); return false;">Buy</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal form to sell an article -->
-  <div class="modal fade" id="sellArticle" role="dialog">
-    <div class="modal-dialog">
-
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Sell your article</h4>
-        </div>
-        <div class="modal-body">
-
-          <div class="row">
-            <div class="col-lg-12">
-              <form>
-                <div class="form-group">
-                  <label for="address">Article name</label>
-                  <input type="text" class="form-control" id="address" placeholder="Adresas kam siųsi">
+      <section id="section3-background">
+          <div class="wow fadeInUp">
+              <p id="laptop-intro"> This is how it look like in Desktop platform </p>
+                <div class="container-fluid">
+                  <img src="/img/a/laptop.png" alt="Balance-interface" style="width:65%" >
                 </div>
-                <div class="form-group">
-                  <label for="kaina">Price in ETH</label>
-                  <input type="number" class="form-control" id="kaina" placeholder="1" pattern="[0-9]+([\.,][0-9]+)?" step="0.01">
-                </div>
-                <div class="form-group">
-                  <label for="description">Description</label>
-                  <textarea type="text" class="form-control vresize" id="article_description" placeholder="Describe your article" maxlength="255"></textarea>
-                </div>
-              </form>
-            </div>
           </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary btn-success" data-dismiss="modal" onclick="App.sendToken(); return false;">Submit</button>
-          <button type="button" class="btn" data-dismiss="modal">Close</button>
-        </div>
-      </div>
+      </section>
 
-    </div>
-  </div>
-
-  <div id="footer" class="container">
-    <nav class="navbar navbar-default navbar-fixed-bottom">
-      <div class="navbar-inner navbar-content-center text-center">
-        <p class="text-muted" credit><a href="http://chainskills.com">ChainSkills</a> - &copy; 2017 - <a href="https://twitter.com/sarbogast">Sebastien Arbogast</a> and <a href="https://twitter.com/eloudsa">Said Eloudrhiri</a></p>
-      </div>
-    </nav>
-  </div>
-
-
-  <div class="container-fluid">
-
-    <div class="row">
-        <div class="col-lg-8">
-
-            <h1>Manage Token</h1>
-            <p>This page is intended for the FIXED Token as sample only. You can send token and you can approve token.
-                <br/>
-                Additionally you can add a token to the exchange provided in this example.</p>
-            <h3>You have <span class="black"><span id="displaySecret"></span> BetterTOKEN</span> in your account</h3>
-
-            <br>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="panel panel-default panel-primary">
-                        <div class="panel-heading">Send Token</div>
-                        <div class="panel-body">
-
-                            <form>
-                                <div class="form-group">
-                                    <label for="inputAmountSendToken">Amount in Token</label>
-                                    <input type="number" name="inputAmountSendToken" class="form-control"
-                                           id="inputAmountSendToken" placeholder="e.g., 95">
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputBeneficiarySendToken">To (address)</label>
-                                    <input type="text" class="form-control" id="inputBeneficiarySendToken"
-                                           name="inputBeneficiarySendToken" placeholder="e.g. 0x123ABde44...">
-                                </div>
-                                <button type="button" class="btn btn-default" onclick="App.sendToken();return false;">
-                                    Send Token
-                                </button>
-                            </form>
-
+      <section id="section4-background" class="Interface-page">
+        <div class="wow fadeInUp">
+        <div class="buy-better-token">
+            <svg class="close" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 32 32">
+              <path d="M31.708 25.708c-0-0-0-0-0-0l-9.708-9.708 9.708-9.708c0-0 0-0 0-0 0.105-0.105 0.18-0.227 0.229-0.357 0.133-0.356 0.057-0.771-0.229-1.057l-4.586-4.586c-0.286-0.286-0.702-0.361-1.057-0.229-0.13 0.048-0.252 0.124-0.357 0.228 0 0-0 0-0 0l-9.708 9.708-9.708-9.708c-0-0-0-0-0-0-0.105-0.104-0.227-0.18-0.357-0.228-0.356-0.133-0.771-0.057-1.057 0.229l-4.586 4.586c-0.286 0.286-0.361 0.702-0.229 1.057 0.049 0.13 0.124 0.252 0.229 0.357 0 0 0 0 0 0l9.708 9.708-9.708 9.708c-0 0-0 0-0 0-0.104 0.105-0.18 0.227-0.229 0.357-0.133 0.355-0.057 0.771 0.229 1.057l4.586 4.586c0.286 0.286 0.702 0.361 1.057 0.229 0.13-0.049 0.252-0.124 0.357-0.229 0-0 0-0 0-0l9.708-9.708 9.708 9.708c0 0 0 0 0 0 0.105 0.105 0.227 0.18 0.357 0.229 0.356 0.133 0.771 0.057 1.057-0.229l4.586-4.586c0.286-0.286 0.362-0.702 0.229-1.057-0.049-0.13-0.124-0.252-0.229-0.357z" fill="#aaa"></path>
+            </svg>
+                <div>
+                    <p id="interface-buy"> Buy BetterTokens</p>
+                      <div class="square-1">
+                        <div>
+                          <p class="text-block-eth">ETH</p>
+                          <p class="text-block-center" id="sum"></p>
                         </div>
-                        <div class="panel-footer">Directly send a token from your address to another address.</div>
-                    </div>
+                      </div>
+                        <span>⇆</span>
+                      <div class="square-2">
+                        <div>
+                          <p class="text-block-eth">BTR</p>
+                          <input type="number" name="inputAmountBuyToken" class="btr-input" id="inputAmountBuyToken" placeholder="e.g., 500">
+                        </div>
+                      </div>
+                </div>
+                  <br>
+                  <div class="rectangle-home">
+                    <span class="priceBtr">1 ETH = 1000 BTR</span>
+                  </div>
+                  <br>
+                <div>
+                  <button class="proc proc-buy" onClick="App.buyToken();return false;" >Buy</button>
                 </div>
 
+                  <div  class="recent">
+                    <span> Recent activities </span>
+                  </div>
 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/web3.min.js"></script>
-  <script src="js/truffle-contract.js"></script>
-  <script src="js/apsp.js"></script>
-</body>
+                  <div class="grid-container">
+                    <div>#006 ⬊ Buy</div>
+                    <div>ETH ➡ BTR</div>
+                    <div>2018.05.26</div>
+                    <div>+150000 BTR</div>
+                  </div>
 
+                  <div class="grid-container">
+                    <div>#005 ⬊ Buy</div>
+                    <div>ETH ➡ BTR</div>
+                    <div>2018.05.24</div>
+                    <div>+750000 BTR</div>
+                  </div>
+
+                  <div class="grid-container">
+                    <div>#004 ⬊ Buy</div>
+                    <div>ETH ➡ BTR</div>
+                    <div>2018.04.04</div>
+                    <div>+100000 BTR</div>
+                  </div>
+          </div>
+          <div class="transfer-better-tokens">
+              <svg class="close close-transfer" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 32 32">
+                <path d="M31.708 25.708c-0-0-0-0-0-0l-9.708-9.708 9.708-9.708c0-0 0-0 0-0 0.105-0.105 0.18-0.227 0.229-0.357 0.133-0.356 0.057-0.771-0.229-1.057l-4.586-4.586c-0.286-0.286-0.702-0.361-1.057-0.229-0.13 0.048-0.252 0.124-0.357 0.228 0 0-0 0-0 0l-9.708 9.708-9.708-9.708c-0-0-0-0-0-0-0.105-0.104-0.227-0.18-0.357-0.228-0.356-0.133-0.771-0.057-1.057 0.229l-4.586 4.586c-0.286 0.286-0.361 0.702-0.229 1.057 0.049 0.13 0.124 0.252 0.229 0.357 0 0 0 0 0 0l9.708 9.708-9.708 9.708c-0 0-0 0-0 0-0.104 0.105-0.18 0.227-0.229 0.357-0.133 0.355-0.057 0.771 0.229 1.057l4.586 4.586c0.286 0.286 0.702 0.361 1.057 0.229 0.13-0.049 0.252-0.124 0.357-0.229 0-0 0-0 0-0l9.708-9.708 9.708 9.708c0 0 0 0 0 0 0.105 0.105 0.227 0.18 0.357 0.229 0.356 0.133 0.771 0.057 1.057-0.229l4.586-4.586c0.286-0.286 0.362-0.702 0.229-1.057-0.049-0.13-0.124-0.252-0.229-0.357z" fill="#aaa"></path>
+              </svg>
+                  <div>
+                    <p id="interface-transfer">Transfer BetterTokens</p>
+                    </div>
+                        <div class="address-label">
+                          <div>
+                            <p class="text-block-address">ERC20 wallet address</p>
+                            <input type="text" class="btr-input" id="inputWalletAddress" name="inputWalletAddress" placeholder="e.g. 0x123ABde44...">
+                          </div>
+                        </div>
+                        <div class="square-transfer">
+                          <div>
+                            <p class="text-block-eth">BTR</p>
+                            <input type="number" name="inputAmountSendToken" class="btr-input" id="inputAmountSendToken" placeholder="e.g., 500">
+                          </div>
+                        </div>
+                  <div>
+                    <button class="proc proc-buy" onClick="App.sendToken();return false;" >Transfer</button>
+                  </div>
+                    <div  class="rectransfer">
+                      <span> Recent activities </span>
+                    </div>
+
+                    <div class="grid-container">
+                      <div>#027 ⬊ Transfer </div>
+                      <div>BTR ➡ 0x123ABde44.. </div>
+                      <div>2018.05.26</div>
+                      <div>+150000 BTR</div>
+                    </div>
+
+                    <div class="grid-container">
+                      <div>#026 ⬊ Transfer</div>
+                      <div>BTR ➡ 0x123ABde44..</div>
+                      <div>2018.05.24</div>
+                      <div>+750000 BTR</div>
+                    </div>
+
+                    <div class="grid-container">
+                      <div>#025 ⬊ Transfer</div>
+                      <div>BTR ➡ 0x123ABde44..</div>
+                      <div>2018.04.04</div>
+                      <div>+100000 BTR</div>
+                    </div>
+            </div>
+            <p id="interface-title">Here you can try how works our DAPP witch is connect to the blockchain node.<br> You can buy, transfer  and donate BTR tokens. Everything works on the Rinkeby TEST NETWORK.<p>
+              <div class="user-interface">
+                  <div class="imgInterface show-buy">
+                    <img src="/img/a/buy.png" alt="Desktop-interface" style="width:25rem" >
+                  </div>
+                  <div class="imgInterface show-transfer">
+                      <img src="/img/a/transfer.png" alt="Desktop-interface" style="width:25rem" >
+                  </div>
+                  <div class="imgInterface">
+                    <img src="/img/a/donate-big.png" alt="Desktop-interface" style="width:25rem" >
+                  </div>
+              </div>
+        </div>
+      </section>
+
+      <section id="section5-background">
+        <div class="wow fadeInUp">
+          <p id="app-intro">Our team is the best! Everyday we are creating our BETTER world.</p>
+        	<div class="container">
+        		<div class="row flex-center sm-no-flex">
+        			<div class="pull-right sm-no-float col-md-8">
+        				<ul class="team-members">
+        					<!-- single member row starts -->
+        					<li class="clearfix">
+        						<div class="member-details">
+        							<div>
+        								<img src="/img/Aurimas.png" alt="UI Designer">
+        								<div class="member-info">
+        									<h3>Aurimas Zaleckas</h3>
+        									<p>Front-end developer</p>
+        								</div>
+        							</div>
+        						</div>
+
+        						<div class="member-details">
+        							<div>
+        								<img src="/img/egle.png" alt="UI Designer">
+        								<div class="member-info">
+        									<h3>Eglė Zaleckienė</h3>
+        									<p>Graphic designer</p>
+        								</div>
+        							</div>
+        						</div>
+
+        						<div class="member-details">
+        							<div>
+        								<img src="/img/ugne.png" alt="UI Designer">
+        								<div class="member-info">
+        									<h3>Ugnė Zaleckaitė</h3>
+        									<p>CEO</p>
+        								</div>
+        							</div>
+        						</div>
+        					</li><!-- /single member row ends -->
+
+        					<!-- single member row starts -->
+        					<li class="clearfix">
+        						<div class="member-details">
+        							<div>
+        								<img src="/img/egle.png" alt="UI Designer">
+        								<div class="member-info">
+        									<h3>Arnas Miegotojas</h3>
+        									<p>UI Designer</p>
+        								</div>
+        							</div>
+        						</div>
+
+        						<div class="member-details">
+        							<div>
+        								<img src="/img/ugne.png" alt="UI Designer">
+        								<div class="member-info">
+        									<h3>Margarita Lopšinė</h3>
+        									<p>Marketing </p>
+        								</div>
+        							</div>
+        						</div>
+
+        						<div class="member-details">
+        							<div>
+        								<img src="/img/Aurimas.png" alt="UI Designer">
+        								<div class="member-info">
+        									<h3>Virgis Stakėnas</h3>
+        									<p>Singer</p>
+        								</div>
+        							</div>
+        						</div>
+        					</li><!-- /single member row ends -->
+
+        					<!-- single member row starts -->
+        					<li class="clearfix">
+        						<div class="member-details">
+        							<div>
+        								<img src="/img/ugne.png" alt="UI Designer">
+        								<div class="member-info">
+        									<h3>Juozas Kapitulauskas</h3>
+        									<p>UX Designer</p>
+        								</div>
+        							</div>
+        						</div>
+
+        						<div class="member-details">
+        							<div>
+        								<img src="/img/egle.png" alt="UI Designer">
+        								<div class="member-info">
+        									<h3>Eglė Nalivaika</h3>
+        									<p>UI Designer</p>
+        								</div>
+        							</div>
+        						</div>
+
+        						<div class="member-details">
+        							<div>
+        								<img src="/img/Aurimas.png" alt="UI Designer">
+        								<div class="member-info">
+        									<h3>Arnas Nalivaika</h3>
+        									<p>Advisor</p>
+        								</div>
+        							</div>
+        						</div>
+        					</li><!-- /single member row ends -->
+
+        				</ul><!-- /end team-photos -->
+        			</div><!-- /end col-md-8 -->
+
+        		</div><!-- /end row -->
+        	</div><!-- /end container -->
+        </div>
+      </section>
+
+        <section id="section6-background">
+          <div class="wow fadeInUp">Roadmap
+            <div class="container">
+            	<div class="row">
+            		<div class="col-md-12 col-sm-12 col-xs-12">
+            			<div class="main-timeline-section">
+            			    <div class="timeline-start"></div>
+            			       <div class="conference-center-line"></div>
+            			          <div class="conference-timeline-content">
+            				              <div class="timeline-article timeline-article-bottom wow fadeInRight">
+                    				        <div class="content-date">
+                    			          		<span>2018 07</span>
+                    				        </div>
+            				                    <div class="meta-date"></div>
+                    				        <div class="content-box">
+                    				        	 <p>Concept development. Testing the platform</p>
+                    				        </div>
+            				              </div>
+
+                      				    <div class="timeline-article timeline-article-top wow fadeInLeft">
+                      				        <div class="content-date">
+                      			          		<span>2018 06</span>
+                      				        </div>
+                      				            <div class="meta-date"></div>
+                            				        <div class="content-box">
+                            				        	<p>Press Release Distribution</p>
+                            				        </div>
+                      				    </div>
+
+                    			      	 <div class="timeline-article timeline-article-bottom wow fadeInRight">
+                      				        <div class="content-date">
+                      			          	<span>2018 05</span>
+                      				        </div>
+                    				              <div class="meta-date"></div>
+                      				        <div class="content-box">
+                      				        	<p>Completion of Legal Formalities</p>
+                      				        </div>
+                    				        </div>
+
+                                    <div class="timeline-article timeline-article-top wow fadeInLeft">
+                                       <div class="content-date">
+                                           <span>2018 04</span>
+                                       </div>
+                                          <div class="meta-date"></div>
+                                       <div class="content-box">
+                                         <p>Completion of Legal Formalities</p>
+                                       </div>
+                                    </div>
+
+                        				    <div class="timeline-article timeline-article-bottom fadeInRight wow fadeInRight">
+                        				        <div class="content-date">
+                        			          		<span>2018 01</span>
+                        				        </div>
+                        				        <div class="meta-date"></div>
+                          				        <div class="content-box">
+                          				        	<p>THE IDEA. Whitepaper Version 1.0</p>
+                          				        </div>
+                        				    </div>
+            			   	   </div>
+            			   	<div class="timeline-end"></div>
+            		  	</div>
+            	</div>
+            </div>
+      </section>
+
+        <section id="section7-background">
+          <div class="wow fadeInUp">
+              <div class="block">
+                <p id="white">BETTER WORLD is one of the largest <br> blockchain-based charity and donation <br> platform in the Europe</p>
+                  <div>
+                    <button type="button" class="big-button" data-toggle="modal" data-target="#loginModal">THE WHITEPAPER </button>
+                  </div>
+              </div>
+          </div>
+        </section>
+
+        <section id="section8-background">
+          <div class="wow fadeInRight">As seen on:
+              <div class="row-news">
+                  <div class="news-logo">
+                      <a href="#" rel="noopener noreferrer" target="_blank"><img src="/img/cryptone.png" alt="news logo" height="100" ></a>
+                  </div>
+                  <div class="news-logo">
+                    <a href="#" rel="noopener noreferrer" target="_blank"><img src="/img/bitcoinist.png" alt="news logo" height="100" ></a>
+                  </div>
+                  <div class="news-logo">
+                    <a href="#" rel="noopener noreferrer" target="_blank"><img src="/img/verslo-zinios.png" alt="news logo" height="100" ></a>
+                  </div>
+              </div>
+          </div>
+
+          <div class="wow fadeInLeft">
+              <div class="news-logo">
+                <a href="#" rel="noopener noreferrer" target="_blank"><img src="/img/CryptoNews.png" alt="news logo" height="100" ></a>
+              </div>
+              <div class="news-logo">
+                <a href="#" rel="noopener noreferrer" target="_blank"><img src="/img/newsbtc.png" alt="news logo" height="100" ></a>
+              </div>
+              <div class="news-logo">
+                <a href="#" rel="noopener noreferrer" target="_blank"><img src="/img/cryptone.png" alt="news logo" height="100" ></a>
+              </div>
+          </div>
+      </section>
+
+          <section id="section9-background">
+              <div class="wow fadeInUp"> Contact us
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <form id="contact-form" name="myForm" class="form" action="#" onsubmit="return validateForm()" method="POST" role="form">
+                            <div class="form-group">
+                                <label class="form-label" id="nameLabel" for="name"></label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Your name" tabindex="1">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" id="emailLabel" for="email"></label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" tabindex="2">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" id="subjectLabel" for="sublect"></label>
+                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" tabindex="3">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" id="messageLabel" for="message"></label>
+                                <textarea rows="6" cols="60" name="message" class="form-control" id="message" placeholder="Your message" tabindex="4"></textarea>
+                            </div>
+
+                            <div class="text-center margin-top-25">
+                                <button type="submit" class="big-button">Send Message</button>
+                            </div>
+                        </form><!-- End form -->
+                </div><!-- End col -->
+          </div>
+      </section>
+    </container>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/web3.min.js"></script>
+        <script src="js/fullpage.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.fullpage.min.js"></script>
+        <script src="js/wow.js"></script>
+        <script src="js/page.js"></script>
+        <script src="js/truffle-contract.js"></script>
+        <script src="js/better.js"></script>
+  </body>
 </html>
