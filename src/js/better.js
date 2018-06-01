@@ -4,6 +4,7 @@ App = {
   account: 0x0,
   loading: false,
 
+
   init: function() {
     return App.initWeb3();
   },
@@ -54,7 +55,7 @@ App = {
   displayTokenBalance: function() {
      App.contracts.BetterToken.deployed().then(function(instance) {
        betterTokenInstance = instance;
-       return betterTokenInstance.balanceOf("0x627306090abaB3A6e1400e9345bC60c78a8BEf57");
+       return betterTokenInstance.balanceOf("0xf17f52151EbEF6C7334FAD080c5704D77216b732");
      }).then(function(result) {
        $('#tokenBalance').text(result);
      }).catch(function(err) {
@@ -63,42 +64,64 @@ App = {
    },
 
 
-   sendToken: function() {
+/*   updateTokenBalance: function () {
+       var tokenInstance;
+       TokenContract.deployed().then(function (instance) {
+           tokenInstance = instance;
+           return tokenInstance.balanceOf.call(account);
+       }).then(function (value) {
+           console.log(value);
+           var balance_element = document.getElementById("balanceTokenInToken");
+           balance_element.innerHTML = value.valueOf();
+       }).catch(function (e) {
+           console.log(e);
+           App.setStatus("Error getting balance; see log.");
+       });
+   },
 
-       var amount = parseInt(document.getElementById("inputAmountSendToken").value);
-       var receiver = document.getElementById("inputBeneficiarySendToken").value;
+
+
+
+
+*/
+
+
+
+
+buyToken: function() {
+       var amount = parseInt(document.getElementById("inputAmountBuyToken").value);
 
        var tokenInstance;
        return App.contracts.BetterToken.deployed().then(function(instance) {
          betterTokenInstance = instance;
-         return betterTokenInstance.transfer(receiver, amount, {from: App.account});
+         return betterTokenInstance.buy(amount, {from: App.account, gas: 4000000});
        }).then(function() {
          App.setStatus("Transaction complete!");
          App.updateTokenBalance();
        }).catch(function(e) {
          console.log(e);
-         self.setStatus("Error sending coin; see log.");
-       });
+      });
+     },
+
+sendToken: function() {
+       var amount = parseInt(document.getElementById("inputAmountSendToken").value);
+       var receiver = document.getElementById("inputWalletAddress").value;
+
+       var tokenInstance;
+       return App.contracts.BetterToken.deployed().then(function(instance) {
+         betterTokenInstance = instance;
+         return betterTokenInstance.transfer(receiver, amount, {from: App.account, gas: 4000000});
+       }).then(function() {
+         App.setStatus("Transaction complete!");
+         App.updateTokenBalance();
+       }).catch(function(e) {
+         console.log(e);
+      });
      },
 
 
 
-
-
-
-  displaySecret: function() {
-     App.contracts.ChainList.deployed().then(function(instance) {
-       chainListInstance = instance;
-       return chainListInstance.tellMe();
-     }).then(function(result) {
-       $('#displaysecret').text(result);
-     }).catch(function(err) {
-       console.log(err.message);
-     });
-   },
-
-
-};
+    }, // app over
 
 $(function() {
   $(window).load(function() {

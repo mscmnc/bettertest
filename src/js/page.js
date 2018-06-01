@@ -1,3 +1,9 @@
+$(".big-button2").click(function() {
+    $('html,body').animate({
+        scrollTop: $(".Interface-page").offset().top},
+        'slow');
+});
+
 $(document).ready(function() {
 
     //activate wow.js
@@ -10,7 +16,7 @@ $(document).ready(function() {
       navigation: true,
       showActiveTooltip: true,
       slidesNavigation: true,
-      navigationTooltips: ['Home', 'What we do', 'Our team', 'Join us', 'Roadmap', 'Whitepaper', 'Press', 'Contacts'],
+      navigationTooltips: ['Home', 'Mobile App', 'Desktop platform', 'User Interface', 'Our team', 'Roadmap', 'Whitepaper', 'Press', 'Contacts'],
       loopBottom: false,
       sectionSelector: 'section'
     });
@@ -25,9 +31,6 @@ $(document).ready(function() {
   });
 
 });
-
-// Roadmap
-
 
 // Get in touch
 function validateForm() {
@@ -103,49 +106,9 @@ $(function() {
   }, 1000);
 });
 
-// Loader
-
-
-    CountDownTimer('04/15/2018 10:1 AM', 'countdown');
-    CountDownTimer('04/25/2018 10:1 AM', 'newcountdown');
-
-    function CountDownTimer(dt, id)
-    {
-        var end = new Date(dt);
-
-        var _second = 1000;
-        var _minute = _second * 60;
-        var _hour = _minute * 60;
-        var _day = _hour * 24;
-        var timer;
-
-        function showRemaining() {
-            var now = new Date();
-            var distance = end - now;
-            if (distance < 0) {
-
-                clearInterval(timer);
-                document.getElementById(id).innerHTML = '0';
-
-                return;
-            }
-            var days = Math.floor(distance / _day);
-            var hours = Math.floor((distance % _day) / _hour);
-            var minutes = Math.floor((distance % _hour) / _minute);
-            var seconds = Math.floor((distance % _minute) / _second);
-
-            document.getElementById(id).innerHTML = days /*+ ' days'*/;
-            //document.getElementById(id).innerHTML += hours + 'hrs ';
-            //document.getElementById(id).innerHTML += minutes + 'mins ';
-            //document.getElementById(id).innerHTML += seconds + 'secs';
-        }
-
-        timer = setInterval(showRemaining, 1000);
-    }
-
 // clock
     var ringer = {
-      countdown_to: "4/25/2018",
+      countdown_to: "6/25/2018",
       rings: {
         'DAYS': {
           s: 86400000, // mseconds in a day,
@@ -165,9 +128,9 @@ $(function() {
         }
        },
       r_count: 4,
-      r_spacing: 10, // px
-      r_size: 100, // px
-      r_thickness: 5, // px
+      r_spacing: 30, // px
+      r_size: 120, // px
+      r_thickness: 10, // px
       update_interval: 11, // ms
 
 
@@ -227,27 +190,27 @@ $(function() {
         $r.ctx.clearRect($r.actual_size*-0.5,$r.actual_size*-0.5,$r.actual_size,$r.actual_size);
 
         // first circle
-        $r.ctx.strokeStyle = "rgba(128,128,128,0.2)";
+        $r.ctx.strokeStyle = "rgba(56,165,169,0.2)";
         $r.ctx.beginPath();
         $r.ctx.arc(0,0,$r.r_size/2,0,2 * Math.PI, 2);
         $r.ctx.lineWidth =$r.r_thickness;
         $r.ctx.stroke();
 
         // second circle
-        $r.ctx.strokeStyle = "rgba(73, 177, 47, 0.88)";
+        $r.ctx.strokeStyle = "rgba(56,165,169, 0.8)";
         $r.ctx.beginPath();
         $r.ctx.arc(0,0,$r.r_size/2,0,endAngle, 1);
         $r.ctx.lineWidth =$r.r_thickness;
         $r.ctx.stroke();
 
         // label
-        $r.ctx.fillStyle = "#FFF";
+        $r.ctx.fillStyle = "rgb(211,211,211)";
 
-        $r.ctx.font = '12px Helvetica';
+        $r.ctx.font = '10px Palanquin';
         $r.ctx.fillText(label, 0, 23);
         $r.ctx.fillText(label, 0, 23);
 
-        $r.ctx.font = 'bold 40px Helvetica';
+        $r.ctx.font = 'bold 40px Palanquin';
         $r.ctx.fillText(Math.floor(value), 0, 10);
 
         $r.ctx.restore();
@@ -255,3 +218,44 @@ $(function() {
     }
 
     ringer.init();
+
+
+// Round and math
+$('#inputAmountBuyToken').keyup(calculate);
+function calculate(e) {
+  var maths = $('#inputAmountBuyToken').val() * 0.001;
+  //var maths2 = Math.round(maths);
+  var maths2 = (Math.round(maths * 100)/100).toFixed(2);
+  $('p#sum').text(maths2);
+};
+
+
+// Show, hide
+
+$('.show-buy').click(function() {
+    $('.buy-better-token').show();
+
+});
+$('.close').click(function() {
+    $('.buy-better-token').fadeOut('slow');
+
+});
+
+$('.proc-buy').click(function() {
+    $('.buy-better-token').delay(1500).fadeOut('slow');
+
+});
+
+$('.show-transfer').click(function() {
+    $('.transfer-better-tokens').show();
+
+});
+$('.close-transfer').click(function() {
+    $('.transfer-better-tokens').fadeOut('slow');
+
+});
+
+$('.proc-transfer').click(function() {
+    $('.transfer-better-tokens').delay(1500).fadeOut('slow');
+
+});

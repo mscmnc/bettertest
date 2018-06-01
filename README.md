@@ -1,1 +1,1 @@
-# BetterWorld test
+# BetterWorld platform test page.
