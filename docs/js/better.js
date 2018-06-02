@@ -55,7 +55,7 @@ App = {
   displayTokenBalance: function() {
      App.contracts.BetterToken.deployed().then(function(instance) {
        betterTokenInstance = instance;
-       return betterTokenInstance.balanceOf("0xf17f52151EbEF6C7334FAD080c5704D77216b732");
+       return betterTokenInstance.balanceOf("0x41C564b48bCEf2E787C36b90d608824177027b39");
      }).then(function(result) {
        $('#tokenBalance').text(result);
      }).catch(function(err) {
