@@ -12,6 +12,7 @@
   padding: 5px;
 }
 
+
 section {
   font-size: 35px;
   text-align: center;
@@ -21,7 +22,7 @@ section {
 
 /* Hide */
 .container-1 {
-  margin-left: 15em;
+  margin-left: 25%;
   margin-top: 10%;
 }
 
@@ -38,6 +39,12 @@ p {
   margin-bottom: 0;
   font-size: 14px;
 
+}
+
+#donate-title > p {
+  margin-left: 180px;
+  margin-bottom: -40px;
+  font-size: 50px;
 }
 
 .main-timeline-section{
@@ -100,7 +107,7 @@ p {
 }
 
 .timeline-article .content-box {
-/*   box-shadow: 2px 2px 4px 0px #888; */
+
   border: 3px solid rgba(56,165,169, 0.5);
   border-radius: 5px;
   background: none;
@@ -118,7 +125,7 @@ p {
   position:absolute;
   left:50%;
   transform: translateX(-50%);
-  top:-20px;
+  top:-23px;
   border:10px solid transparent;
   border-bottom-color: rgba(56,165,169, 0.5);
 }
@@ -136,7 +143,7 @@ p {
   position:absolute;
   left:50%;
   transform: translateX(-50%);
-  bottom:-20px;
+  bottom:-23px;
   border:10px solid transparent;
   border-top-color: rgba(56,165,169, 0.5);
 }
@@ -149,6 +156,125 @@ p {
 .interface {
   color: black;
   font-size: 20px;
+}
+
+#better-logo {
+  width: 1.5%;
+  float: left;
+  margin-right: 15px;
+  margin-top: 8px;
+}
+
+.logo-line {
+  display: inline-block;
+}
+
+.story-window  {
+  width: 38rem;
+}
+
+.logo-groups {
+  width: 15rem;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.donate-logos-line {
+  margin-top: 20px;
+  margin-left: 25px;
+}
+
+/* Check boxes */
+.checks {
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    font-size: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: rgba(211,211,211, 0.4);
+
+}
+
+/* Hide the browser's default checkbox */
+.checks input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border: solid 2px rgba(211,211,211, 0.4);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.checks input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.checks .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid rgba(211,211,211, 0.4);
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.check-box {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+/*  Seach bar */
+.search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-right: 16px;
+  margin-top: 18px;
+  background: none;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  margin-right: -190px;
+}
+
+.search-container .fa {
+    color: rgba(211,211,211, 0.8);
+}
+
+.search-input input[type=text] {
+  padding: 1px;
+  margin-top: 25px;
+  margin-right: 55px;
+  font-size: 13px;
+  float: right;
+  background: none;
+  border: solid 2px rgba(211,211,211, 0.8);
+  border-radius: 10px;
+}
+
+.search-container .fa:hover {
+  color: white;
+  transition-duration: 0.4s;
 }
 
 .panel-transparent {
@@ -174,6 +300,54 @@ p {
 
 }
 
+.arrow {
+    height: 0;
+    width: 0;
+    border-bottom: 8px solid #FF0000;
+    border-left: 16px dotted transparent;
+    border-right: 16px dotted transparent;
+    left: 0px;
+    top: 2px;
+    margin-left: 20px;
+    z-index: 1;
+    position: relative;
+}
+
+.side-line-1 {
+  margin-left: 50px;
+  display: inline-block;
+  border-top: 2px solid;
+  width: 54px;
+}
+
+.side-line-2 {
+  display: inline-block;
+  border-top: 2px solid;
+  width: 965px;
+
+}
+.side-line-3 {
+  margin-left: 150px;
+  margin-right: 100px;
+  margin-top: -15px;
+  border-left: 2px solid;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+
+
+}
+.triangle {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    transform: rotate(45deg);
+    transform-origin: center center;
+    border-top: 2px solid;
+    border-left: 2px solid;
+    margin-left: -3px;
+    margin-right: -3px;
+    margin-bottom: -13px;
+}
 .form-group .form-control {
   -webkit-box-shadow: none;
   border-bottom: 1px;
@@ -197,6 +371,7 @@ textarea {
 .form-control {
     color: rgba(211,211,211, 0.8);
 }
+
 .btr-input {
     text-align: center;
     background: none;
@@ -205,6 +380,24 @@ textarea {
     width: 100%;
 }
 
+.dnt-input {
+    text-align: center;
+    background: none;
+    border: none;
+    width: 35%;
+}
+
+
+.check-boxes {
+  display: -webkit-inline-box;
+  padding-bottom: 10px;
+  margin-left: -500px;
+  padding-left: 40px;
+}
+
+.check-boxes-div {
+  padding-left: 20px;
+}
 
 ::placeholder {
 	color: rgba(211,211,211, 0.4);
@@ -256,12 +449,7 @@ textarea {
     outline: none;
 }
 
-@media only screen and (max-width: 500px) {
-    .btn-mod.btn-large {
-       padding: 6px 16px;
-       font-size: 11px;
-    }
-}
+
 
 body {
   padding-top: 40px;
@@ -281,7 +469,7 @@ nav {
   float: left;
   line-height: 40px;
   margin: 0;
-  color: white;
+  display: inline-block;
 }
 
 #cssmenu {
@@ -524,7 +712,7 @@ body * {
 
 .countdowntimewrap {
 	  margin: 50px auto 10px;
-}
+  }
 
 #countdown-wrap {
   width: 100%;
@@ -540,8 +728,6 @@ body * {
   text-align: right;
   color: rgba(211,211,211, 0.8);
   padding-top: 3rem;
-  @media only screen and (max-width : 640px) {
-  }
 
 }
 
@@ -586,6 +772,13 @@ body * {
 }
 
 /* RESPONSIVE */
+@media only screen and (max-width: 500px) {
+    .btn-mod.btn-large {
+       padding: 6px 16px;
+       font-size: 11px;
+    }
+}
+
 @media only screen and (max-width : 992px) {
 	.sm-no-flex {
 		display: block;
@@ -673,6 +866,7 @@ h4 {
   position: absolute;
   padding-left: 30rem;
 }
+
 .donate-app {
   padding-left: 12rem;
 }
@@ -687,7 +881,7 @@ h4 {
 .imgInterface {
   margin: 1rem;
   cursor: pointer;
-}
+  }
 
 #interface-title {
   padding-bottom: 8rem;
@@ -715,9 +909,61 @@ h4 {
   outline: 1px solid rgba(211,211,211, 0.1);
   position: absolute;
   left: 37%;
+  top: 250px;
   background: #1a1c1d;
   box-shadow: 10px 15px 10px rgba(0,0,0, 0.2);
   display: none;
+}
+
+.donate-eth {
+  position:absolute;
+  left: 280px;
+  top: 90px;
+  width: 1333px;
+  height: 750px;
+  border: solid 12px #1a1c1d;
+  outline: 1px solid rgba(211,211,211, 0.1);
+  background: #1a1c1d;
+  display: none;
+}
+
+.story-paragraph {
+  margin-top: -150px;
+  font-size: 15px;
+  text-align: left;
+  padding: 5px;
+}
+
+.fullstory {
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 260px;
+  margin-top: -10px;
+}
+
+.fullstory:hover {
+  text-decoration: underline;
+}
+
+.story-1-short, .story-2-short, .story-3-short  {
+  position:absolute;
+  left: 680px;
+  width: 380px;
+  height: 160px;
+  background: #1a1c1d;
+  display: none;
+}
+
+.story-1-short {
+  top: 430px;
+}
+
+.story-2-short {
+  top: 480px;
+}
+
+.story-3-short {
+  top: 535px;
 }
 
 .buy-better-token {
@@ -728,6 +974,11 @@ h4 {
 #interface-buy, #interface-transfer {
   padding: 5% 10% ;
   font-size: 3.5rem;
+}
+
+#interface-donate {
+  padding: 1% 5% ;
+  font-size: 2.5rem;
 }
 
 .text-block-eth, .text-block-address {
@@ -777,23 +1028,47 @@ h4 {
   margin-right: 100px;
 }
 
+.title-container > div {
+  font-size: 20px;
+}
+
 .square-transfer {
   margin: auto;
   margin-top: 25px;
 }
 
+.info-logo {
+  width: 2rem;
+  cursor: pointer;
+}
+
+.title-container {
+    display: grid;
+    grid-template-columns: 80px 100px 120px 120px 80px 120px 180px 50px;
+    grid-gap: 20px;
+    background: none;
+    padding: 15px 0px;
+    margin: 0px 20px;
+}
+
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-gap: 25px;
+  grid-template-columns: 80px 100px 120px 120px 80px 120px 180px 50px;
+  grid-gap: 20px;
   background: none;
-  padding: 10px;
-  border-top: 1px solid rgba(211,211,211, 0.8);
+  padding: 13px 0px;
+  border-top: 1.5px solid rgba(211,211,211, 0.5);
+  margin: 0px 20px;
 }
+
 
 .grid-container > div {
   text-align: auto;
   font-size: 14px;
+}
+
+.transfer-activ > div {
+  font-size: 10px;
 }
 
 .rectangle-home {
@@ -819,8 +1094,24 @@ h4 {
   border-color: white;
   transition-duration: 0.4s;
 }
+.grid-container .don-butn a {
+  border-radius: 1rem;
+  cursor: pointer;
+  color: rgba(211,211,211, 0.8);
+  border: 2px solid rgba(211,211,211, 0.8);
+  padding: 0px 25px;
+  margin-left: -20px;
+  line-height: normal
+}
 
-.proc-buy {
+.grid-container .don-butn a:hover {
+color: white;
+border-color: white;
+transition-duration: 0.6s;
+text-decoration: none;
+}
+
+.proc-buy  {
   width: 140px;
   height: 38px;
   margin: 25px;
@@ -835,7 +1126,7 @@ h4 {
 }
 
 .rectransfer {
-    padding-top: 5px;
+  padding-top: 5px;
   font-size: 22px;
 }
 
@@ -850,4 +1141,1667 @@ h4 {
 
 #fp-nav ul li .fp-tooltip {
   color: rgba(211,211,211, 0.8);
+}
+
+
+@media (min-width: 1441px) and (max-width: 1700px) {
+
+  .donate-eth {
+    left: 65px;
+  }
+
+}
+
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+
+  /*
+    Home page
+  */
+#better-logo {
+    width: 3%;
+    float: left;
+    margin-right: 15px;
+    margin-top: 8px;
+  }
+
+.underline {
+    font-size: 1.8em;
+}
+
+canvas {
+  width: 60% !important;
+  height: 60% !important;
+}
+
+.btn-outline-main  {
+   font-size: 45%;
+}
+
+.big-button {
+  font-size: 2rem;
+  padding: 3px 30px;
+}
+
+#welcome  {
+	font-weight: bold;
+	font-size: 4.5rem;
+  padding-top: 3%;
+}
+
+#glass {
+     height: 30px;
+}
+
+.progress-bar-success, #goal {
+    font-size: 1.6rem;
+}
+
+#countdown-wrap {
+     width: 65%;
+     height: 230px;
+}
+.countdowntimewrap {
+    margin: 40px auto 10px;
+}
+/*
+  Mobile app
+*/
+ .mobile-pic {
+     width: 200px !important;
+
+   }
+
+ .balance-pic {
+     margin-left: 26%;
+   }
+
+ .donate-pic {
+     width: 22% !important;
+     margin-top: -25%;
+     margin-left: 49%;
+   }
+
+ .inbox-pic {
+     margin-left: 27%;
+     margin-top: -3%;
+   }
+
+ .myDonations-pic {
+     margin-left: 47%;
+     margin-top: -22%;
+   }
+
+.intro-mobile {
+    text-align: center;
+    padding-bottom: 2%;
+}
+
+
+ .imgContainer-mobile {
+     padding-left: 525px;
+   }
+
+  .inbox-pic, .myDonations-pic, .balance-pic  {
+       width: 22% !important;
+}
+
+#section2-background {
+  text-align: left;
+}
+/*
+  Dekstop platform
+*/
+#laptop-intro {
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+    padding-left: 0px;
+}
+/*
+  User interface
+*/
+
+.transfer-activ > div {
+    font-size: 10px;
+}
+
+
+.logo-groups {
+    width: 10rem;
+    margin-left: 5px;
+  }
+
+.triangle {
+    height: 20px;
+    width: 20px;
+    margin-bottom: -9px;
+}
+
+.side-line-1 {
+  width: 40px;
+  margin-left: 31px;
+}
+
+.side-line-2 {
+  width: 600px;
+}
+
+.side-line-3 {
+  margin-left: 96px;
+  margin-top: -11px;
+  margin-right: 64px;
+}
+
+.title-container > div {
+    font-size: 16px;
+}
+
+#donate-title > p {
+    margin-left: 180px;
+    margin-bottom: -40px;
+    font-size: 30px;
+}
+
+.title-container {
+  grid-template-columns: 40px 55px 55px 90px 30px 100px 110px 70px;
+  grid-gap: 10px;
+  padding: 10px 0px;
+}
+
+.checks {
+    padding-left: 20px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.checkmark {
+  height: 15px;
+  width: 15px;
+}
+
+.check-box {
+  margin-left: 10px;
+}
+
+.check-boxes {
+  margin-left: -220px;
+  margin-top: 30px;
+  padding-bottom: 0px;
+}
+
+.fullstory {
+    font-size: 10px;
+    margin-left: 160px;
+}
+
+.checks .checkmark:after {
+    left: 3px;
+    top: 0px;
+}
+
+.search-input input[type=text] {
+    font-size: 10px;
+}
+
+.search-container button {
+    margin-right: -160px;
+    margin-top: 15px;
+}
+
+.dnt-input {
+    width: 45%;
+}
+
+.grid-container .don-butn a {
+    padding: 0px 20px;
+    margin-left: -10px;
+}
+
+.info-logo {
+    width: 1.5rem;
+}
+
+.story-1-short, .story-2-short, .story-3-short {
+    left: 398px;
+    width: 250px;
+    height: 100px;
+}
+
+.story-1-short {
+    top: 305px;
+}
+
+.story-2-short {
+  top: 338px;
+}
+
+.story-3-short {
+  top: 372px;
+}
+
+.story-paragraph {
+    font-size: 10px;
+    margin-top: -100px;
+}
+
+.story-window {
+    width: 25rem;
+}
+
+.grid-container {
+    grid-template-columns: 40px 55px 55px 90px 30px 100px 110px 70px;
+    grid-gap: 10px;
+  }
+.transfer-activ {
+    grid-template-columns: 90px 110px 70px 70px ;
+    }
+.buy-container {
+  grid-template-columns: 90px 110px 70px 70px ;
+}
+#interface-title {
+    padding-bottom: 3rem;
+    font-size: 2rem;
+}
+
+.bu, .tr, .don {
+    width: 20rem !important;
+  }
+
+.buy-better-token, .transfer-better-tokens {
+    width: 450px;
+    height: 470px;
+    left: 30%;
+}
+
+#interface-buy, #interface-transfer {
+    padding: 2% 5%;
+    font-size: 2.2rem;
+}
+
+.square-1 {
+  margin-left: 15%;
+  padding-bottom: 25px;
+}
+
+.square-1, .square-2, .square-transfer {
+    padding-top: 1%;
+    width: 125px;
+    height: 125px;
+
+}
+
+.text-block-eth, .text-block-address {
+    font-size: 75%;
+    border-bottom: solid 1px;
+    padding-bottom: 1px;
+}
+
+.square-2 {
+    float: right;
+    margin-right: 15%;
+}
+
+.btr-input {
+    font-size: 17px;
+    margin-top: 16%;
+  }
+
+.priceBtr {
+    font-size: 18px;
+    margin-left: 0;
+}
+
+.text-block-center {
+     font-size: 16px;
+     padding: 0;
+     margin-top: 16%;
+}
+
+.span-rows {
+  font-size: 30px;
+}
+
+.activities {
+  font-size: 16px;
+}
+
+.recent {
+    font-size: 10px;
+    padding-bottom: 3px;
+}
+
+.grid-container > div {
+    font-size: 12px;
+}
+
+.grid-container {
+    padding: 5px;
+}
+
+.proc-buy {
+    width: 30%;
+    height: 20%;
+    font-size: 20px;
+    margin: 3%;
+}
+
+.close {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+.address-label {
+    padding-top: 1%;
+    width: 350px;
+    height: 85px;
+}
+
+.rectransfer {
+    padding-top: 0;
+    font-size: 0;
+}
+
+.wallin {
+  margin-top: 1%;
+}
+
+
+.square-transfer {
+    margin-top: 10px;
+}
+
+#interface-transfer {
+    padding: 1% 5%;
+}
+
+.donate-eth {
+  left: 50px;
+  top: 90px;
+  width: 850px;
+  height: 520px;
+}
+/*
+  Our team
+*/
+
+#app-intro {
+     padding-left: 0%;
+     font-size: 2.0rem;
+     padding-bottom: 1%;
+     padding-top: 3%;
+ }
+
+.member-info h3 {
+   font-size: 11px;
+}
+
+.team-members li > div {
+   width: 15%;
+}
+
+.member-info {
+  left: 5%;
+}
+
+.member-info p {
+  font-size: 10px;
+}
+
+.col-md-8 {
+    width: 80%;
+}
+
+/*
+  Roadmap
+*/
+
+.content-box {
+  width: 120px !important;
+}
+
+.timeline-article-bottom .content-box {
+   top: 23%;
+}
+.timeline-article .content-box {
+  padding: 5px;
+  left: -50px;
+}
+
+
+.sp {
+    font-size: 1.5rem;
+    margin: 10px;
+}
+
+.timeline-article .meta-date {
+      left: 2px;
+      width: 15px;
+      height: 15px;
+}
+
+.main-timeline-section .timeline-start, .main-timeline-section .timeline-end {
+    width: 25px;
+    height: 25px;
+  }
+
+.timeline-article-top .content-box:before {
+    top: -23px;
+}
+
+.timeline-article-bottom .content-box:before {
+   bottom: -23px;
+}
+/*
+  Whitepaper
+*/
+#white {
+  font-size: 3.5rem;
+}
+/*
+  Press
+*/
+.nlogo {
+    height: 70px !important;
+}
+
+.news-logo {
+  padding: 20px;
+}
+/*
+  Contacts
+*/
+.form-control {
+      height: 10px;
+      padding: 0px 0px;
+      font-size: 12px;
+      line-height: 1.0;
+}
+
+.email-button {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  padding: 3px 15px;
+  border-width: 3px;
+}
+
+.contact-us {
+      display: inline-block;
+}
+
+.col-md-12 {
+    width: 75%;
+    margin-left: 10%;
+}
+/*
+  All elements
+*/
+
+h4 {
+  font-size: 80%;
+}
+
+p {
+  font-size: 10px;
+}
+
+.wow {
+  font-size: 2.5rem;
+}
+
+.col-xs-12.col-sm-12.col-md-12.col-lg-12 {
+    padding: 0 0% 0 0%;
+}
+
+}
+
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .imgContainer-mobile {
+      padding-left: 440px;
+      top: 310px;
+  }
+  .mobile-pic {
+    width: 170px !important;
+    margin-left: -15px;
+    margin-top: -80px;
+  }
+
+  .inbox-pic {
+    margin-left: 25%;
+  }
+}
+
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px)  {
+
+  /*
+    Home page
+  */
+#better-logo {
+      width: 3%;
+      float: left;
+      margin-right: 15px;
+      margin-top: 8px;
+    }
+
+  .underline {
+    font-size: 1.7em;
+}
+
+canvas {
+  width: 60% !important;
+  height: 60% !important;
+}
+
+.btn-outline-main  {
+   font-size: 45%;
+   line-height: 1.3;
+}
+
+.big-button {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  padding: 3px 30px;
+  border-width: 4px;
+}
+
+#welcome  {
+	font-weight: bold;
+	font-size: 2.5rem;
+  padding-top: 3%;
+}
+
+#glass {
+     height: 20px;
+}
+
+.progress-bar-success, #goal {
+    font-size: 1.5rem;
+}
+
+#countdown-wrap {
+     width: 65%;
+     height: 200px;
+}
+.countdowntimewrap {
+    margin: 40px auto 10px;
+}
+/*
+  Mobile app
+*/
+
+#app-intro {
+     padding-left: 0%;
+     font-size: 1.7rem;
+     padding-bottom: 1%;
+ }
+/*
+  Dekstop platform
+*/
+#laptop-intro {
+    font-size: 2.0rem;
+    padding-bottom: 1rem;
+    padding-left: 0px;
+}
+/*
+  User interface
+*/
+.donate-eth {
+  left: 20px;
+  top: 70px;
+  width: 680px;
+  height: 350px;
+}
+
+.logo-groups {
+    width: 8rem;
+    margin-left: 5px;
+  }
+
+.triangle {
+    height: 15px;
+    width: 15px;
+    margin-bottom: -6px;
+    margin-left: -2px;
+    margin-right: -2px;
+}
+
+.side-line-1 {
+  width: 20px;
+  margin-left: 28px;
+}
+
+.side-line-2 {
+  width: 460px;
+}
+
+.side-line-3 {
+  margin-left: 93px;
+  margin-top: -7px;
+  margin-right: 64px;
+}
+
+.title-container > div {
+    font-size: 11px;
+}
+
+.grid-container > div {
+    font-size: 8px;
+}
+
+
+#donate-title > p {
+    margin-left: 120px;
+    margin-bottom: -40px;
+    font-size: 20px;
+}
+
+.title-container {
+  grid-template-columns: 15px 55px 50px 80px 20px 90px 70px 80px;
+  grid-gap: 1px;
+  padding: 3px 0px;
+}
+
+.checks {
+    padding-left: 15px;
+    cursor: pointer;
+    font-size: 8px;
+}
+
+.checkmark {
+  height: 10px;
+  width: 10px;
+  border: solid 1px rgba(211,211,211, 0.4);
+}
+.checks .checkmark:after {
+    border-width: 0 1px 1px 0;
+    width: 3px;
+    height: 6px;
+  }
+
+.check-box {
+  margin-left: 10px;
+}
+
+.check-boxes {
+  margin-left: -150px;
+  margin-top: 30px;
+  padding-bottom: 0px;
+}
+
+.fullstory {
+    font-size: 8px;
+    margin-left: 145px;
+    margin-top: -5px;
+}
+
+.checks .checkmark:after {
+    left: 3px;
+    top: 0px;
+}
+
+.search-input input[type=text] {
+    font-size: 8px;
+    margin-top: 5px;
+    margin-right: 25px;
+    border: solid 1px rgba(211,211,211, 0.8);
+}
+
+.search-container button {
+    margin-right: -127px;
+    margin-top: -3px;
+    font-size: 12px;
+}
+
+.check-boxes-div {
+    padding-right: 40px;
+}
+.dnt-input {
+    width: 45%;
+}
+
+.grid-container .don-butn a {
+    padding: 0px 20px;
+    margin-left: -10px;
+    border: 1px solid rgba(211,211,211, 0.8);
+}
+
+.info-logo {
+    width: 1.5rem;
+}
+
+.story-1-short, .story-2-short, .story-3-short {
+    left: 316px;
+    width: 200px;
+    height: 84px;
+}
+
+.story-1-short {
+    top: 205px;
+}
+
+.story-2-short {
+  top: 228px;
+}
+
+.story-3-short {
+  top: 252px;
+}
+
+.story-paragraph {
+    font-size: 8px;
+    margin-top: -80px;
+    padding: 3px;
+}
+
+.story-window {
+    width: 20rem;
+}
+
+.transfer-activ {
+    grid-template-columns: 90px 110px 70px 70px ;
+    }
+.buy-container {
+  grid-template-columns: 90px 110px 70px 70px ;
+}
+.grid-container {
+    grid-template-columns: 15px 55px 50px 80px 20px 90px 70px 80px;
+    grid-gap: 1px;
+  }
+
+.buy-container, .transfer-activ {
+      grid-template-columns: 65px 108px 65px 75px 20px 90px 70px 80px;
+      grid-gap: 1px;
+      margin: 0px 5px;
+    }
+
+#interface-title {
+    padding-bottom: 3rem;
+    font-size: 1.7rem;
+}
+
+.bu, .tr, .don {
+    width: 15rem !important;
+  }
+
+.mobile-pic {
+    width: 20% !important;
+  }
+
+.balance-pic {
+    margin-left: -37%;
+  }
+
+.donate-pic {
+    margin-top: -28%;
+    margin-right: -18%;
+  }
+
+.inbox-pic {
+    margin-left: -39%;
+    margin-top: -5%;
+  }
+
+.myDonations-pic {
+    margin-left: 15%;
+    margin-top: -25%;
+  }
+
+.imgContainer-mobile {
+    padding-left: 0;
+  }
+
+.donate-pic, .inbox-pic, .myDonations-pic, .balance-pic  {
+    width: 25% !important;
+  }
+
+.buy-better-token, .transfer-better-tokens {
+    width: 350px;
+    height: 340px;
+    left: 30%;
+    top: 100px;
+}
+
+#interface-buy, #interface-transfer {
+    padding: 2% 5%;
+    font-size: 1.7rem;
+}
+
+.square-1 {
+  margin-left: 15%;
+  padding-bottom: 25px;
+}
+
+.square-1, .square-2, .square-transfer {
+    padding-top: 1%;
+    width: 85px;
+    height: 85px;
+
+}
+
+.text-block-eth, .text-block-address {
+    font-size: 110%;
+    border-bottom: solid 1px;
+    padding-bottom: 1px;
+}
+
+.square-2 {
+    float: right;
+    margin-right: 15%;
+}
+
+.btr-input {
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    margin-top: 16%;
+  }
+
+.priceBtr {
+    font-size: 13px;
+    margin-left: 0;
+}
+
+.text-block-center {
+     font-size: 12px;
+     padding: 0;
+     margin-top: 16%;
+}
+.span-rows {
+  font-size: 20px;
+}
+
+.activities {
+  font-size: 14px;
+}
+
+.recent {
+    padding-bottom: 1%;
+    padding-top: 10%;
+    font-size: 10px;
+}
+.grid-container > div {
+    font-size: 8px;
+}
+.grid-container {
+    padding: 3px;
+}
+
+.proc-buy {
+    width: 30%;
+    height: 20%;
+    font-size: 15px;
+    margin: 2%;
+}
+
+.close {
+  width: 15px !important;
+  height: 15px !important;
+}
+
+.address-label {
+    padding-top: 1%;
+    width: 250px;
+    height: 60px;
+}
+.rectransfer {
+    padding-top: 0;
+    font-size: 0;
+}
+.wallin {
+  margin-top: 1%;
+}
+
+.transfer-activ > div {
+  font-size: 9px;
+}
+
+.square-transfer {
+    margin-top: 10px;
+}
+#interface-transfer {
+    padding: 0% 5%;
+}
+/*
+  Our team
+*/
+.member-info h3 {
+   font-size: 8px;
+}
+
+.team-members li > div {
+   width: 15%;
+}
+
+.member-info {
+  left: 15%;
+}
+
+.member-info p {
+  font-size: 8px;
+}
+
+/*
+  Roadmap
+*/
+
+.content-box {
+  width: 120px !important;
+}
+
+.timeline-article-bottom .content-box {
+   top: 23%;
+}
+.timeline-article .content-box {
+  padding: 5px;
+  left: -50px;
+}
+
+
+.sp {
+    font-size: 1.5rem;
+    margin: 10px;
+}
+
+.timeline-article .meta-date {
+      left: 2px;
+      width: 15px;
+      height: 15px;
+}
+
+.main-timeline-section .timeline-start, .main-timeline-section .timeline-end {
+    width: 25px;
+    height: 25px;
+  }
+
+.timeline-article-top .content-box:before {
+    top: -23px;
+}
+
+.timeline-article-bottom .content-box:before {
+   bottom: -23px;
+}
+/*
+  Whitepaper
+*/
+#white {
+  font-size: 2rem;
+}
+/*
+  Press
+*/
+.nlogo {
+    height: 52px !important;
+}
+
+.news-logo {
+  padding: 25px;
+}
+/*
+  Contacts
+*/
+.form-control {
+      height: 10px;
+      padding: 0px 0px;
+      font-size: 10px;
+      line-height: 1.0;
+}
+
+.email-button {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  padding: 3px 15px;
+  border-width: 4px;
+}
+
+.contact-us {
+      display: inline-block;
+}
+
+.col-md-12 {
+    width: 75%;
+    margin-left: 10%;
+}
+/*
+  All elements
+*/
+ * {
+   font-size: 90%;
+ }
+h4 {
+  font-size: 70%;
+}
+
+p {
+  font-size: 10px;
+}
+
+.wow {
+  font-size: 1.7rem;
+}
+
+.col-xs-12.col-sm-12.col-md-12.col-lg-12 {
+    padding: 0 0% 0 0%;
+}
+
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 480px) and (max-width: 767px) {
+
+  /*
+    Home page
+  */
+#better-logo {
+      width: 2%;
+      float: left;
+      margin-right: 5px;
+      margin-top: 4px;
+}
+
+#cssmenu {
+  	font-size: 15px;
+    padding: 0px 5px;
+    border-bottom-width: 1px;
+}
+
+.btn {
+    padding: 1px 8px;
+}
+
+.btn-outline-main {
+    border-width: 1px;
+}
+
+h4 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+  .underline {
+    font-size: 1.0em;
+}
+
+canvas {
+  width: 50% !important;
+  height: 50% !important;
+}
+
+.btn-outline-main  {
+   font-size: 45%;
+   line-height: 1.3;
+}
+
+.big-button {
+  font-size: 0.8rem;
+  line-height: 1.0;
+  padding: 3px 15px;
+  border-width: 2px;
+}
+
+#welcome  {
+	font-weight: bold;
+	font-size: 1.5rem;
+  padding-top: 0%;
+}
+
+#glass {
+     height: 10px;
+}
+
+.progress-bar-success {
+    font-size: 0.8rem;
+    line-height: 10px;
+}
+#goal {
+  font-size: 1rem;
+  padding-top: 1rem;
+}
+
+.goal-number, .goal-label {
+  font-size: 0.8rem;
+}
+
+#countdown-wrap {
+     width: 65%;
+     height: 100px;
+     padding: 0px;
+}
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+    height: 4px;
+    width: 4px;
+    left: 150%;
+}
+#fp-nav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li a.active span, .fp-slidesNav ul li:hover a.active span {
+    height: 8px;
+    width: 8px;
+    margin: -6px 0 0 -4px;
+}
+
+#fp-nav ul li .fp-tooltip.right {
+    right: 5px;
+    top: 1%;
+    font-size: 8px;
+}
+.countdowntimewrap {
+    margin: 15px auto 5px;
+}
+/*
+  Mobile app
+*/
+
+#app-intro {
+     padding-left: 0%;
+     font-size: 1.1rem;
+     padding-bottom: 1%;
+ }
+/*
+  Dekstop platform
+*/
+#laptop-intro {
+    font-size: 1.1rem;
+    padding-bottom: 1rem;
+    padding-left: 0px;
+}
+/*
+  User interface
+*/
+.donate-eth {
+  left: 10px;
+  top: 30px;
+  width: 400px;
+  height: 250px;
+}
+
+.logo-groups {
+    width: 5rem;
+    margin-left: 2px;
+  }
+
+.triangle {
+    height: 10px;
+    width: 10px;
+    margin-bottom: -4px;
+    margin-left: -1px;
+    margin-right: -1px;
+    border-top: 1px solid;
+    border-left: 1px solid;
+}
+
+.side-line-1 {
+  width: 21px;
+  margin-left: 27px;
+  border-top: 1px solid;
+}
+
+.side-line-2 {
+  width: 290px;
+  border-top: 1px solid;
+}
+
+.side-line-3 {
+  margin-left: 40px;
+  margin-top: -4px;
+  margin-right: 13px;
+  border-left: 1px solid;
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+}
+
+.title-container > div {
+    font-size: 8px;
+}
+
+
+#donate-title > p {
+    margin-left: 80px;
+    margin-bottom: -30px;
+    font-size: 14px;
+}
+
+.title-container {
+  grid-template-columns: 10px 40px 20px 75px 5px 70px 45px 50px;
+  grid-gap: 1px;
+  padding: 3px 0px;
+  margin: 0px 5px;
+}
+
+.checks {
+    padding-left: 15px;
+    cursor: pointer;
+    font-size: 7px;
+}
+
+.checkmark {
+  height: 8px;
+  width: 8px;
+  top:2px;
+  border: solid 1px rgba(211,211,211, 0.4);
+}
+.checks .checkmark:after {
+    border-width: 0 1px 1px 0;
+    width: 3px;
+    height: 6px;
+  }
+
+.check-box {
+  margin-left: 2px;
+}
+
+.check-boxes {
+  margin-left: -150px;
+  margin-top: 30px;
+  padding-bottom: 0px;
+}
+
+.fullstory {
+    font-size: 6px;
+    margin-left: 105px;
+    margin-top: -7px;
+}
+
+.checks .checkmark:after {
+    left: 2px;
+    top: -1px;
+}
+
+.search-input input[type=text] {
+    font-size: 5px;
+    margin-top: 2px;
+    margin-right: 20px;
+    border: solid 1px rgba(211,211,211, 0.8);
+}
+
+.search-container button {
+    margin-right: -75px;
+    margin-top: -5px;
+    font-size: 8px;
+}
+
+.check-boxes-div {
+    padding-left: 30px;
+}
+.dnt-input {
+    width: 45%;
+}
+
+.grid-container .don-butn a {
+    padding: 0px 10px;
+    margin-left: -10px;
+    border: 1px solid rgba(211,211,211, 0.8);
+}
+
+.info-logo {
+    width: 1rem;
+}
+
+.story-1-short, .story-2-short, .story-3-short {
+    left: 188px;
+    width: 150px;
+    height: 50px;
+}
+
+.story-1-short {
+    top: 155px;
+}
+
+.story-2-short {
+  top: 166px;
+}
+
+.story-3-short {
+  top: 178px;
+}
+
+.story-paragraph {
+    font-size: 6px;
+    margin-top: -60px;
+    padding: 3px;
+}
+
+.story-window {
+    width: 15rem;
+}
+
+.transfer-activ {
+    grid-template-columns: 90px 110px 70px 70px ;
+    }
+.buy-container {
+  grid-template-columns: 90px 110px 70px 70px ;
+}
+.grid-container {
+    grid-template-columns: 10px 40px 20px 75px 5px 70px 45px 50px;
+    grid-gap: 1px;
+    margin: 0px 5px;
+  }
+
+.buy-container, .transfer-activ {
+      grid-template-columns: 65px 50px 50px 50px 20px 90px 70px 80px;
+      grid-gap: 1px;
+      margin: 0px 5px;
+    }
+
+
+#interface-title {
+    padding-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+.bu, .tr, .don {
+    width: 10rem !important;
+  }
+
+.mobile-pic {
+    width: 20% !important;
+  }
+
+.balance-pic {
+    margin-left: -32%;
+  }
+
+.donate-pic {
+    margin-top: -35%;
+    margin-right: -12%;
+  }
+
+.inbox-pic {
+    margin-left: -35%;
+    margin-top: -10%;
+  }
+
+.myDonations-pic {
+    margin-left: 7%;
+    margin-top: -20%;
+  }
+
+.imgContainer-mobile {
+    padding-left: 0;
+  }
+
+.donate-pic, .inbox-pic, .myDonations-pic, .balance-pic  {
+    width: 25% !important;
+  }
+
+.buy-better-token, .transfer-better-tokens {
+    width: 250px;
+    height: 240px;
+    left: 25%;
+    top: 40px;
+}
+
+#interface-buy, #interface-transfer {
+    padding: 2% 5%;
+    font-size: 1.7rem;
+}
+
+.square-1 {
+  margin-left: 15%;
+  padding-bottom: 25px;
+}
+
+.square-1, .square-2, .square-transfer {
+    padding-top: 1%;
+    width: 65px;
+    height: 65px;
+
+}
+
+.text-block-eth, .text-block-address {
+    font-size: 110%;
+    border-bottom: solid 1px;
+    padding-bottom: 1px;
+}
+
+.square-2 {
+    float: right;
+    margin-right: 15%;
+}
+
+.btr-input {
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    margin-top: 16%;
+  }
+
+.priceBtr {
+    font-size: 10px;
+    margin-left: 0;
+}
+
+.text-block-center {
+     font-size: 12px;
+     padding: 0;
+     margin-top: 16%;
+}
+.span-rows {
+  font-size: 20px;
+}
+
+.activities {
+  font-size: 10px;
+}
+
+.recent {
+    padding-bottom: 1%;
+    padding-top: 2%;
+    font-size: 10px;
+}
+.grid-container > div {
+    font-size: 6px;
+
+}
+.grid-container {
+    padding: 0px;
+}
+
+.proc-buy {
+    width: 20%;
+    height: 1%;
+    font-size: 10px;
+    margin: 1%;
+}
+
+.close {
+  width: 10px !important;
+  height: 10px !important;
+  margin-right: -8px;
+  margin-top: -8px;
+}
+
+.address-label {
+    padding-top: 1%;
+    width: 200px;
+    height: 50px;
+}
+.rectransfer {
+    padding-top: 0;
+    font-size: 0;
+}
+.wallin {
+  margin-top: 1%;
+}
+
+.transfer-activ > div {
+  font-size: 5px;
+}
+
+.square-transfer {
+    margin-top: 10px;
+}
+#interface-transfer {
+    padding: 0% 5%;
+}
+/*
+  Our team
+*/
+.member-info h3 {
+   font-size: 8px;
+}
+
+.team-members li > div {
+   width: 15%;
+}
+
+.member-info {
+  transform: none;
+}
+
+.member-info p {
+  font-size: 8px;
+}
+.member-details > div:after {
+	background-image: linear-gradient(0deg, rgba(56,165,169, 0.5) 40%, transparent 50%);
+}
+/*
+  Roadmap
+*/
+.timeline-article {
+  min-height: 250px;
+}
+.main-timeline-section {
+    height: 250px;
+}
+
+.content-box {
+  width: 80px !important;
+}
+
+.timeline-article-bottom .content-box {
+   top: 29%;
+}
+.timeline-article .content-box {
+  padding: 2px;
+  left: -5px;
+  border: 1px solid rgba(56,165,169, 0.5);
+
+}
+.timeline-article-bottom .content-date {
+    top: 50%;
+}
+
+.main-timeline-section .conference-center-line {
+    height: 2px;
+}
+
+.sp {
+    font-size: 0.9rem;
+    margin: 5px;
+}
+
+.timeline-article .meta-date {
+      left: 30px;
+      width: 9px;
+      height: 9px;
+      border: 1px solid #FFF;
+}
+
+.main-timeline-section .timeline-start, .main-timeline-section .timeline-end {
+    width: 12px;
+    height: 12px;
+    border: 1px solid #FFF;
+  }
+
+.timeline-article-top .content-box:before {
+    top: -25px;
+}
+
+.timeline-article-bottom .content-box:before {
+   bottom: -13px;
+   left: 48%;
+   border: 6px solid transparent;
+   border-top-color: rgba(56,165,169, 0.5);
+}
+
+.timeline-article .content-date {
+   left: 12px;
+  }
+
+.timeline-article-top .content-box:before {
+    border: 6px solid transparent;
+    border-bottom-color: rgba(56,165,169, 0.5);
+    top: -13px;
+}
+/*
+  Whitepaper
+*/
+#white {
+  font-size: 1.1rem;
+  padding-bottom: 2rem;
+}
+/*
+  Press
+*/
+.nlogo {
+    height: 30px !important;
+}
+
+.news-logo {
+  padding: 10px;
+}
+/*
+  Contacts
+*/
+.form-control {
+      height: 15px;
+      padding: 0px 0px;
+      font-size: 8px;
+      line-height: 1.0;
+}
+
+.email-button {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  padding: 3px 15px;
+  border-width: 1px;
+}
+
+.contact-us {
+      display: inline-block;
+      text-align: center;
+}
+
+.form-group {
+    margin-bottom: 5px;
+}
+
+.col-md-12 {
+    width: 70%;
+    margin-left: 15%;
+}
+
+.form-group .form-control:focus {
+  border-width: 0 0 1px 0;
+}
+/*
+  All elements
+*/
+ * {
+   font-size: 90%;
+ }
+h4 {
+  font-size: 70%;
+}
+
+p {
+  font-size: 7px;
+}
+
+.wow {
+  font-size: 1.2rem;
+}
+
+.col-xs-12.col-sm-12.col-md-12.col-lg-12 {
+    padding: 0 0% 0 0%;
+}
+
 }

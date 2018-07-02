@@ -21,15 +21,6 @@ $(document).ready(function() {
       sectionSelector: 'section'
     });
 
-  //apply color to each section from array
-  int = -1;
-  color_array = ['#eee','#eee','#3F5EC4','#3498db','#000','#000','#000', '#3F5EC4' ];
-
-  $('section').each(function(){
-    int++
-    $(this).addClass('grid-item-' + int).css('background-color', color_array[int]);
-  });
-
 });
 
 // Get in touch
@@ -108,7 +99,7 @@ $(function() {
 
 // clock
     var ringer = {
-      countdown_to: "6/25/2018",
+      countdown_to: "10/15/2018",
       rings: {
         'DAYS': {
           s: 86400000, // mseconds in a day,
@@ -223,10 +214,9 @@ $(function() {
 // Round and math
 $('#inputAmountBuyToken').keyup(calculate);
 function calculate(e) {
-  var maths = $('#inputAmountBuyToken').val() * 0.001;
-  //var maths2 = Math.round(maths);
-  var maths2 = (Math.round(maths * 100)/100).toFixed(2);
-  $('p#sum').text(maths2);
+  var maths = $('#inputAmountBuyToken').val() * 1000;
+  //var maths2 = (Math.round(maths * 100)/100).toFixed(2);
+  $('p#sum').text(maths);
 };
 
 
@@ -246,6 +236,8 @@ $('.proc-buy').click(function() {
 
 });
 
+
+
 $('.show-transfer').click(function() {
     $('.transfer-better-tokens').show();
 
@@ -259,3 +251,31 @@ $('.proc-transfer').click(function() {
     $('.transfer-better-tokens').delay(1500).fadeOut('slow');
 
 });
+
+$('.show-donate').click(function() {
+    $('.donate-eth').show();
+
+});
+$('.close-donate').click(function() {
+    $('.donate-eth').fadeOut('slow');
+
+});
+
+$('.proc-donate').click(function() {
+    $('.donate-eth').delay(1500).fadeOut('slow');
+
+});
+
+
+
+$('.story-1').click(function(){
+    $('.story-1-short').toggle();
+});
+
+$('.story-2').click(function(){
+    $('.story-2-short').toggle();
+});
+
+ $('.story-3').click(function(){
+    $('.story-3-short').toggle();
+ });

@@ -4,7 +4,7 @@
   <meta name="description" content="BetterWorld charity platform">
   <link href="https://fonts.googleapis.com/css?family=Palanquin:200" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -20,6 +20,7 @@
 
 <header id="header-fixed">
       <div id="cssmenu">
+        <div id="logo"><img src="/img/a/logo.png" id="better-logo" alt="BetterWorld logo" ></div>
         <div id="left-side">
           <h4>Your Balance: <span id="accountBalance"></span>, BetterTokens: <span id="tokenBalance"> </span> </h4>
         </div>
@@ -77,24 +78,24 @@
 
       <section id="section2-background">
         <div>
-          <p id="app-intro">We are believe that together we can create a BETTER WORLD. Take a look at our Mobile App</p>
+          <p id="app-intro" class="intro-mobile">We are believe that together we can create a BETTER WORLD. Take a look at our Mobile App</p>
               <div class="block-1">
                   <div class="imgContainer imgContainer-mobile">
-                    <img src="/img/a/main-mobile.png" alt="Mobile-interface" style="width:30rem" >
+                    <img class="mobile-pic" src="/img/a/main-mobile.png" alt="Mobile-interface" style="width:30rem" >
                   </div>
-                  <div class="imgContainer wow fadeInLeft">
-                    <img src="/img/a/balance.png" alt="Balance-interface" style="width:40rem" >
+                  <div class="imgContainer balance-container wow fadeInLeft ">
+                    <img class="balance-pic" src="/img/a/balance.png" alt="Balance-interface" style="width:40rem" >
                   </div>
                   <div class="imgContainer donate-app wow fadeInRight">
-                    <img src="/img/a/donate.png" alt="Balance-interface" style="width:40rem" >
+                    <img class="donate-pic" src="/img/a/donate.png" alt="Balance-interface" style="width:40rem" >
                   </div>
               </div>
                   <div class="block-2">
                      <div class="imgContainer-2 wow fadeInLeft">
-                       <img src="/img/a/inbox.png" alt="Inbox-interface" style="width:40rem" >
+                       <img class="inbox-pic" src="/img/a/inbox.png" alt="Inbox-interface" style="width:40rem" >
                      </div>
                      <div class="imgContainer-3 wow fadeInRight ">
-                       <img src="/img/a/my-donations.png" alt="Balance-interface" style="width:40rem" >
+                       <img class="myDonations-pic" src="/img/a/my-donations.png" alt="Balance-interface" style="width:40rem" >
                      </div>
                   </div>
         </div>
@@ -119,46 +120,46 @@
                     <p id="interface-buy"> Buy BetterTokens</p>
                       <div class="square-1">
                         <div>
-                          <p class="text-block-eth">ETH</p>
-                          <p class="text-block-center" id="sum"></p>
+                          <p class="text-block-eth">BTR</p>
+                          <p type="number" class="text-block-center" id="sum"></p>
                         </div>
                       </div>
-                        <span>⇆</span>
+                        <span class="span-rows">⇆</span>
                       <div class="square-2">
                         <div>
-                          <p class="text-block-eth">BTR</p>
-                          <input type="number" name="inputAmountBuyToken" class="btr-input" id="inputAmountBuyToken" placeholder="e.g., 500">
+                          <p class="text-block-eth">ETH</p>
+                          <input type="number" name="inputAmountBuyToken" class="btr-input" id="inputAmountBuyToken" placeholder="e.g., 5">
                         </div>
                       </div>
                 </div>
                   <br>
                   <div class="rectangle-home">
-                    <span class="priceBtr">1 ETH = 1000 BTR</span>
+                    <span class="priceBtr">1000 BTR = 1 ETH</span>
                   </div>
                   <br>
                 <div>
                   <button class="proc proc-buy" onClick="App.buyToken();return false;" >Buy</button>
                 </div>
 
-                  <div  class="recent">
-                    <span> Recent activities </span>
+                  <div class="recent">
+                    <span class="activities"> Recent activities </span>
                   </div>
 
-                  <div class="grid-container">
+                  <div class="grid-container buy-container">
                     <div>#006 ⬊ Buy</div>
                     <div>ETH ➡ BTR</div>
                     <div>2018.05.26</div>
                     <div>+150000 BTR</div>
                   </div>
 
-                  <div class="grid-container">
+                  <div class="grid-container buy-container">
                     <div>#005 ⬊ Buy</div>
                     <div>ETH ➡ BTR</div>
                     <div>2018.05.24</div>
                     <div>+750000 BTR</div>
                   </div>
 
-                  <div class="grid-container">
+                  <div class="grid-container buy-container">
                     <div>#004 ⬊ Buy</div>
                     <div>ETH ➡ BTR</div>
                     <div>2018.04.04</div>
@@ -175,7 +176,7 @@
                         <div class="address-label">
                           <div>
                             <p class="text-block-address">ERC20 wallet address</p>
-                            <input type="text" class="btr-input" id="inputWalletAddress" name="inputWalletAddress" placeholder="e.g. 0x123ABde44...">
+                            <input type="text" class="btr-input wallin" id="inputWalletAddress" name="inputWalletAddress" placeholder="e.g. 0x123ABde44...">
                           </div>
                         </div>
                         <div class="square-transfer">
@@ -185,43 +186,203 @@
                           </div>
                         </div>
                   <div>
-                    <button class="proc proc-buy" onClick="App.sendToken();return false;" >Transfer</button>
+                    <button class="proc proc-buy proc-transfer " onClick="App.sendToken();return false;" >Transfer</button>
                   </div>
                     <div  class="rectransfer">
-                      <span> Recent activities </span>
+                      <span class="activities"> Recent activities </span>
                     </div>
 
-                    <div class="grid-container">
+                    <div class="grid-container transfer-activ">
                       <div>#027 ⬊ Transfer </div>
                       <div>BTR ➡ 0x123ABde44.. </div>
                       <div>2018.05.26</div>
                       <div>+150000 BTR</div>
                     </div>
 
-                    <div class="grid-container">
+                    <div class="grid-container transfer-activ">
                       <div>#026 ⬊ Transfer</div>
                       <div>BTR ➡ 0x123ABde44..</div>
                       <div>2018.05.24</div>
                       <div>+750000 BTR</div>
                     </div>
 
-                    <div class="grid-container">
+                    <div class="grid-container transfer-activ">
                       <div>#025 ⬊ Transfer</div>
                       <div>BTR ➡ 0x123ABde44..</div>
                       <div>2018.04.04</div>
                       <div>+100000 BTR</div>
                     </div>
             </div>
+            <div class="donate-eth">
+                <svg class="close close-donate" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 32 32">
+                  <path d="M31.708 25.708c-0-0-0-0-0-0l-9.708-9.708 9.708-9.708c0-0 0-0 0-0 0.105-0.105 0.18-0.227 0.229-0.357 0.133-0.356 0.057-0.771-0.229-1.057l-4.586-4.586c-0.286-0.286-0.702-0.361-1.057-0.229-0.13 0.048-0.252 0.124-0.357 0.228 0 0-0 0-0 0l-9.708 9.708-9.708-9.708c-0-0-0-0-0-0-0.105-0.104-0.227-0.18-0.357-0.228-0.356-0.133-0.771-0.057-1.057 0.229l-4.586 4.586c-0.286 0.286-0.361 0.702-0.229 1.057 0.049 0.13 0.124 0.252 0.229 0.357 0 0 0 0 0 0l9.708 9.708-9.708 9.708c-0 0-0 0-0 0-0.104 0.105-0.18 0.227-0.229 0.357-0.133 0.355-0.057 0.771 0.229 1.057l4.586 4.586c0.286 0.286 0.702 0.361 1.057 0.229 0.13-0.049 0.252-0.124 0.357-0.229 0-0 0-0 0-0l9.708-9.708 9.708 9.708c0 0 0 0 0 0 0.105 0.105 0.227 0.18 0.357 0.229 0.356 0.133 0.771 0.057 1.057-0.229l4.586-4.586c0.286-0.286 0.362-0.702 0.229-1.057-0.049-0.13-0.124-0.252-0.229-0.357z" fill="#aaa"></path>
+                </svg>
+                <div class="donate-logos-line">
+                    <div class="logo-line">
+                      <img class="logo-groups" src="/img/a/animal.png" alt="Animal Charities logo">
+                    </div>
+                    <div class="logo-line">
+                        <img class="logo-groups" src="/img/a/environmental.png" alt="Environmental charities logo">
+                    </div>
+                    <div class="logo-line">
+                      <img class="logo-groups" src="/img/a/ngo.png" alt="International NGOs logo">
+                    </div>
+                    <div class="logo-line">
+                      <img class="logo-groups" src="/img/a/health.png" alt="Health Charities logo">
+                    </div>
+                    <div class="logo-line">
+                        <img class="logo-groups" src="/img/a/education.png" alt="Education Charities logo">
+                    </div>
+                    <div class="logo-line">
+                      <img class="logo-groups" src="/img/a/arts.png" alt="Arts and Culture charities logo">
+                    </div>
+                </div>
+                <div class="line-separator">
+                    <div class="side-line-1"> </div>
+                    <div class="triangle">
+                      <div class="fill"></div>
+                    </div>
+                    <div class="side-line-2"> </div>
+                </div>
+                <div class="side-line-3">
+
+                      <div class="search-container">
+                        <form  class="search-input">
+                          <input type="text" placeholder="Search" name="search">
+                          <button ><i class="fa fa-search"></i></button>
+                        </form>
+                      </div>
+                        <div id="donate-title" > <p> Donate </p> </div>
+                        <div class="check-boxes">
+                          <div class="check-boxes-div">
+                            <div class="check-box">
+                            <label class="checks">All
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                            </div>
+                            </label>
+                            <div class="check-box">
+                            <label class="checks">Organizations
+                            <input type="checkbox" >
+                            <span class="checkmark"></span>
+                            </div>
+                            </label>
+                            <div class="check-box">
+                            <label class="checks">Personal requests
+                            <input type="checkbox" >
+                            <span class="checkmark"></span>
+                            </div>
+                            </label>
+                          </div>
+                      </div>
+                      <div class="title-container">
+                        <div class="title number">#</div>
+                        <div class="title start">Start ↑ </div>
+                        <div class="title end">End</div>
+                        <div class="title name">Name</div>
+                        <div class="title"></div>
+                        <div class="title">Reached/Goal</div>
+                        <div class="title">Amount </div>
+                        <div class="title"></div>
+                      </div>
+                      <div class="grid-container">
+                        <div>#027</div>
+                        <div>2018.05.25</div>
+                        <div>2018.09.26</div>
+                        <div>Eglė Zaleckienė</div>
+                        <div><img class="info-logo story-1" src="/img/a/information-button.png" alt="Information button image"></div>
+                        <div><span id="amountRaised"></span> ETH / 100 ETH </div>
+                        <div><input type="number" name="inputAmountETH" class="dnt-input" id="inputAmountETH" placeholder="e.g., 5">ETH</div>
+                        <div class="don-butn"><a onClick="App.donate();return false;" >Donate</a></div>
+                      </div>
+                      <div class="grid-container">
+                        <div>#020</div>
+                        <div>2018.05.20</div>
+                        <div>2018.07.20</div>
+                        <div>Damien Fund</div>
+                        <div><img class="info-logo story-2" src="/img/a/information-button.png" alt="Information button image"></div>
+                        <div>25 ETH / 825 ETH </div>
+                        <div><input type="number" name="inputAmountSendToken" class="dnt-input" id="inputAmountSendToken" placeholder="e.g., 5">ETH</div>
+                        <div class="don-butn"><a onClick="App.donate();return false;" >Donate</a></div>
+                      </div>
+                      <div class="grid-container">
+                        <div>#025</div>
+                        <div>2018.04.15</div>
+                        <div>2019.01.26</div>
+                        <div>Tušti narvai</div>
+                        <div><img class="info-logo story-3" src="/img/a/information-button.png" alt="Information button image"></div>
+                        <div>20 ETH / 100 ETH </div>
+                        <div><input type="number" name="inputAmountSendToken" class="dnt-input" id="inputAmountSendToken" placeholder="e.g., 5">ETH</div>
+                        <div class="don-butn"><a onClick="App.donate();return false;" >Donate</a></div>
+                      </div>
+                      <div class="grid-container">
+                        <div>#022</div>
+                        <div>2018.04.01</div>
+                        <div>2018.08.20</div>
+                        <div>Aurimas Zaleckas</div>
+                        <div><img class="info-logo story-4" src="/img/a/information-button.png" alt="Information button image"></div>
+                        <div>53 ETH / 150 ETH </div>
+                        <div><input type="number" name="inputAmountSendToken" class="dnt-input" id="inputAmountSendToken" placeholder="e.g., 5">ETH</div>
+                        <div class="don-butn"><a onClick="App.donate();return false;" >Donate</a></div>
+                      </div>
+                      <div class="grid-container">
+                        <div>#021</div>
+                        <div>2018.03.01</div>
+                        <div>2018.10.26</div>
+                        <div>Tautmilės globa</div>
+                        <div><img class="info-logo story-5" src="/img/a/information-button.png" alt="Information button image"></div>
+                        <div>28 ETH / 100 ETH </div>
+                        <div><input type="number" name="inputAmountSendToken" class="dnt-input" id="inputAmountSendToken" placeholder="e.g., 5">ETH</div>
+                        <div class="don-butn"><a onClick="App.donate();return false;" >Donate</a></div>
+                      </div>
+                      <div class="grid-container">
+                        <div>#024</div>
+                        <div>2018.02.01</div>
+                        <div>2018.12.26</div>
+                        <div>Eglė Zaleckienė</div>
+                        <div><img class="info-logo story-6 " src="/img/a/information-button.png" alt="Information button image"></div>
+                        <div>25 ETH / 100 ETH </div>
+                        <div><input type="number" name="inputAmountSendToken" class="dnt-input" id="inputAmountSendToken" placeholder="e.g., 5">ETH</div>
+                        <div class="don-butn"><a onClick="App.donate();return false;" >Donate</a></div>
+                      </div>
+
+                    <div class="story-1-short">
+                      <img class="story-window" src="/img/a/story.png" alt="Story background">
+                      <p class="story-paragraph"> Egle's dog was diagnosed with cataracts in both eyes.
+                          Surgery is the only option to prevent Egle's beloved pet
+                          from going blind.<br>
+                          Without a surgery 1 year old husky dog will lose eyesight
+                           within the next two or three months.
+                       </p>
+                       <div class="fullstory" href="#" > See full story ➝ </div>
+                    </div>
+
+                    <div class="story-2-short">
+                      <img class="story-window" src="/img/a/story.png" alt="Story background">
+                      <p class="story-paragraph">Damien McCauley is a sweet little 5 year old boy who has battled every day of his life to live. He was born with a condition called Nephronophthisis (type 3) which causes liver and kidney failure, severe developmental delays, heart, eye and bone defects, lack of muscle tone and more.
+                       </p>
+                       <div class="fullstory" href="#" > See full story ➝ </div>
+                    </div>
+
+                    <div class="story-3-short">
+                      <img class="story-window" src="/img/a/story.png" alt="Story background">
+                      <p class="story-paragraph">In September 2017, Hurricane Maria hit the shores of Puerto Rico resulting in $91.61 billion dollars of damage. The island is still rebuilding and in the wake of the devastation, another crisis looms as an estimated 500,000 stray dogs - "Satos" - are being left to die.
+                       </p>
+                       <div class="fullstory" href="#" > See full story ➝ </div>
+                    </div>
+
+              </div>
+            </div>
             <p id="interface-title">Here you can try how works our DAPP witch is connect to the blockchain node.<br> You can buy, transfer  and donate BTR tokens. Everything works on the Rinkeby TEST NETWORK.<p>
               <div class="user-interface">
                   <div class="imgInterface show-buy">
-                    <img src="/img/a/buy.png" alt="Desktop-interface" style="width:25rem" >
+                    <img class="bu" src="/img/a/buy.png" alt="Desktop-interface" style="width:25rem" >
                   </div>
                   <div class="imgInterface show-transfer">
-                      <img src="/img/a/transfer.png" alt="Desktop-interface" style="width:25rem" >
+                      <img class="tr" src="/img/a/transfer.png" alt="Desktop-interface" style="width:25rem" >
                   </div>
-                  <div class="imgInterface">
-                    <img src="/img/a/donate-big.png" alt="Desktop-interface" style="width:25rem" >
+                  <div class="imgInterface show-donate">
+                    <img class="don" src="/img/a/donate-big.png" alt="Desktop-interface" style="width:25rem" >
                   </div>
               </div>
         </div>
@@ -343,7 +504,7 @@
 
         <section id="section6-background">
           <div class="wow fadeInUp">Roadmap
-            <div class="container">
+            <div class="container roadmap">
             	<div class="row">
             		<div class="col-md-12 col-sm-12 col-xs-12">
             			<div class="main-timeline-section">
@@ -352,7 +513,7 @@
             			          <div class="conference-timeline-content">
             				              <div class="timeline-article timeline-article-bottom wow fadeInRight">
                     				        <div class="content-date">
-                    			          		<span>2018 07</span>
+                    			          		<span class="sp">2018 07</span>
                     				        </div>
             				                    <div class="meta-date"></div>
                     				        <div class="content-box">
@@ -362,7 +523,7 @@
 
                       				    <div class="timeline-article timeline-article-top wow fadeInLeft">
                       				        <div class="content-date">
-                      			          		<span>2018 06</span>
+                      			          		<span class="sp">2018 06</span>
                       				        </div>
                       				            <div class="meta-date"></div>
                             				        <div class="content-box">
@@ -372,7 +533,7 @@
 
                     			      	 <div class="timeline-article timeline-article-bottom wow fadeInRight">
                       				        <div class="content-date">
-                      			          	<span>2018 05</span>
+                      			          	<span class="sp">2018 05</span>
                       				        </div>
                     				              <div class="meta-date"></div>
                       				        <div class="content-box">
@@ -382,7 +543,7 @@
 
                                     <div class="timeline-article timeline-article-top wow fadeInLeft">
                                        <div class="content-date">
-                                           <span>2018 04</span>
+                                           <span class="sp">2018 04</span>
                                        </div>
                                           <div class="meta-date"></div>
                                        <div class="content-box">
@@ -392,7 +553,7 @@
 
                         				    <div class="timeline-article timeline-article-bottom fadeInRight wow fadeInRight">
                         				        <div class="content-date">
-                        			          		<span>2018 01</span>
+                        			          		<span class="sp">2018 01</span>
                         				        </div>
                         				        <div class="meta-date"></div>
                           				        <div class="content-box">
@@ -404,6 +565,8 @@
             		  	</div>
             	</div>
             </div>
+          </div>
+        </div>
       </section>
 
         <section id="section7-background">
@@ -421,32 +584,32 @@
           <div class="wow fadeInRight">As seen on:
               <div class="row-news">
                   <div class="news-logo">
-                      <a href="#" rel="noopener noreferrer" target="_blank"><img src="/img/cryptone.png" alt="news logo" height="100" ></a>
+                      <a href="#" rel="noopener noreferrer" target="_blank"><img src="/img/cryptone.png" class="nlogo" alt="news logo" height="100" ></a>
                   </div>
                   <div class="news-logo">
-                    <a href="#" rel="noopener noreferrer" target="_blank"><img src="/img/bitcoinist.png" alt="news logo" height="100" ></a>
+                    <a href="#" rel="noopener noreferrer" target="_blank"><img src="/img/bitcoinist.png" class="nlogo" alt="news logo" height="100" ></a>
                   </div>
                   <div class="news-logo">
-                    <a href="#" rel="noopener noreferrer" target="_blank"><img src="/img/verslo-zinios.png" alt="news logo" height="100" ></a>
+                    <a href="#" rel="noopener noreferrer" target="_blank"><img src="/img/verslo-zinios.png" class="nlogo" alt="news logo" height="100" ></a>
                   </div>
               </div>
           </div>
 
           <div class="wow fadeInLeft">
               <div class="news-logo">
-                <a href="#" rel="noopener noreferrer" target="_blank"><img src="/img/CryptoNews.png" alt="news logo" height="100" ></a>
+                <a href="#" rel="noopener noreferrer" target="_blank"><img src="/img/CryptoNews.png" class="nlogo" alt="news logo" height="100" ></a>
               </div>
               <div class="news-logo">
-                <a href="#" rel="noopener noreferrer" target="_blank"><img src="/img/newsbtc.png" alt="news logo" height="100" ></a>
+                <a href="#" rel="noopener noreferrer" target="_blank"><img src="/img/newsbtc.png" class="nlogo" alt="news logo" height="100" ></a>
               </div>
               <div class="news-logo">
-                <a href="#" rel="noopener noreferrer" target="_blank"><img src="/img/cryptone.png" alt="news logo" height="100" ></a>
+                <a href="#" rel="noopener noreferrer" target="_blank"><img src="/img/cryptone.png" class="nlogo" alt="news logo" height="100" ></a>
               </div>
           </div>
       </section>
 
           <section id="section9-background">
-              <div class="wow fadeInUp"> Contact us
+              <div class="wow fadeInUp contact-us"> Contact us
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <form id="contact-form" name="myForm" class="form" action="#" onsubmit="return validateForm()" method="POST" role="form">
                             <div class="form-group">
@@ -470,7 +633,7 @@
                             </div>
 
                             <div class="text-center margin-top-25">
-                                <button type="submit" class="big-button">Send Message</button>
+                                <button type="submit" class="big-button email-button">Send Message</button>
                             </div>
                         </form><!-- End form -->
                 </div><!-- End col -->
