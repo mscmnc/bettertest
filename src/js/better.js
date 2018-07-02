@@ -21,7 +21,7 @@ App = {
     web3 = new Web3(App.web3Provider);
 
     App.displayAccountInfo();
-
+    App.initContract2();
     return App.initContract();
   },
 
@@ -32,7 +32,9 @@ App = {
         $('#account').text(account);
         web3.eth.getBalance(account, function(err, balance) {
           if(err === null) {
-            $('#accountBalance').text(web3.fromWei(balance, "ether") + " ETH");
+            balance2 = web3.fromWei(balance, "ether");
+            maths = (Math.round(balance2 * 100)/100).toFixed(2);
+            $('#accountBalance').text(maths + " ETH");
           }
         })
       }
@@ -45,9 +47,20 @@ App = {
       App.contracts.BetterToken = TruffleContract(betterTokenArtifact);
       // set the provider for our contracts
       App.contracts.BetterToken.setProvider(App.web3Provider);
-      // listen to events
+
       App.displayTokenBalance();
       return App.displayTokenBalance();
+     });
+  },
+
+  initContract2: function() {
+    $.getJSON('shortICO.json', function(shortICOArtifact) {
+      // get the contract artifact file and use it to instantiate a truffle contract abstraction
+      App.contracts.shortICO = TruffleContract(shortICOArtifact);
+      // set the provider for our contracts
+      App.contracts.shortICO.setProvider(App.web3Provider);
+      App.amountRaised();
+      return App.amountRaised();
       // retrieve the article from the contract
         });
   },
@@ -55,7 +68,7 @@ App = {
   displayTokenBalance: function() {
      App.contracts.BetterToken.deployed().then(function(instance) {
        betterTokenInstance = instance;
-       return betterTokenInstance.balanceOf("0x41C564b48bCEf2E787C36b90d608824177027b39");
+       return betterTokenInstance.balanceOf(App.account);
      }).then(function(result) {
        $('#tokenBalance').text(result);
      }).catch(function(err) {
@@ -63,29 +76,18 @@ App = {
      });
    },
 
-
-/*   updateTokenBalance: function () {
-       var tokenInstance;
-       TokenContract.deployed().then(function (instance) {
-           tokenInstance = instance;
-           return tokenInstance.balanceOf.call(account);
-       }).then(function (value) {
-           console.log(value);
-           var balance_element = document.getElementById("balanceTokenInToken");
-           balance_element.innerHTML = value.valueOf();
-       }).catch(function (e) {
-           console.log(e);
-           App.setStatus("Error getting balance; see log.");
-       });
-   },
-
-
-
-
-
-*/
-
-
+   amountRaised: function() {
+      App.contracts.shortICO.deployed().then(function(instance) {
+        shortICOInstance = instance;
+        return shortICOInstance.amountRaised();
+      }).then(function(result) {
+        result2 = web3.fromWei(result, "ether");
+        result3 = (Math.round(result2 * 100)/100).toFixed(2);
+        $('#amountRaised').text(result3);
+      }).catch(function(err) {
+        console.log(err.message);
+      });
+    },
 
 
 buyToken: function() {
@@ -94,10 +96,9 @@ buyToken: function() {
        var tokenInstance;
        return App.contracts.BetterToken.deployed().then(function(instance) {
          betterTokenInstance = instance;
-         return betterTokenInstance.buy(amount, {from: App.account, gas: 4000000});
+         return betterTokenInstance.buy({from: App.account, value: web3.toWei(amount, "ether"), gas: 400000 });
        }).then(function() {
-         App.setStatus("Transaction complete!");
-         App.updateTokenBalance();
+         App.setStatus("BuyToken process is completed!");
        }).catch(function(e) {
          console.log(e);
       });
@@ -110,10 +111,9 @@ sendToken: function() {
        var tokenInstance;
        return App.contracts.BetterToken.deployed().then(function(instance) {
          betterTokenInstance = instance;
-         return betterTokenInstance.transfer(receiver, amount, {from: App.account, gas: 4000000});
+         return betterTokenInstance.transfer(receiver, amount, {from: App.account, gas: 400000});
        }).then(function() {
          App.setStatus("Transaction complete!");
-         App.updateTokenBalance();
        }).catch(function(e) {
          console.log(e);
       });
@@ -121,7 +121,21 @@ sendToken: function() {
 
 
 
-    }, // app over
+     donate: function() {
+            var amount = parseInt(document.getElementById("inputAmountETH").value);
+            
+            return App.contracts.shortICO.deployed().then(function(instance) {
+              shortICOInstance = instance;
+              return shortICOInstance.donate(App.account, {value: web3.toWei(amount, "ether"), gas: 400000 });
+            }).then(function() {
+              App.setStatus("Donate complete!");
+            }).catch(function(e) {
+              console.log(e);
+           });
+          },
+
+
+}, // app over
 
 $(function() {
   $(window).load(function() {
