@@ -1411,6 +1411,7 @@ canvas {
     width: 450px;
     height: 470px;
     left: 30%;
+    top: 20%;
 }
 
 #interface-buy, #interface-transfer {
