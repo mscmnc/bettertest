@@ -16,6 +16,7 @@ $(document).ready(function() {
       navigation: true,
       showActiveTooltip: true,
       slidesNavigation: true,
+      //responsiveWidth: 480,
       navigationTooltips: ['Home', 'Mobile App', 'Desktop platform', 'User Interface', 'Our team', 'Roadmap', 'Whitepaper', 'Press', 'Contacts'],
       loopBottom: false,
       sectionSelector: 'section'
@@ -99,7 +100,7 @@ $(function() {
 
 // clock
     var ringer = {
-      countdown_to: "10/15/2018",
+        countdown_to: "10/25/2018",
       rings: {
         'DAYS': {
           s: 86400000, // mseconds in a day,

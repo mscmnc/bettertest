@@ -2197,7 +2197,7 @@ p {
   ##Screen = B/w 481px to 767px
 */
 
-@media (min-width: 480px) and (max-width: 767px) {
+@media (min-width: 481px) and (max-width: 767px) {
 
   /*
     Home page
@@ -2806,3 +2806,642 @@ p {
 }
 
 }
+
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    /*
+      Home page
+    */
+    #section1-background{
+    background-size: auto;
+    }
+    .container-1 {
+        margin: 0;
+    }
+
+  #better-logo {
+        width: 2%;
+        float: left;
+        margin-right: 5px;
+        margin-top: 4px;
+  }
+
+  #cssmenu {
+    	font-size: 15px;
+      padding: 0px 5px;
+      border-bottom-width: 1px;
+  }
+
+  .btn {
+      padding: 1px 8px;
+  }
+
+  .btn-outline-main {
+      border-width: 1px;
+  }
+
+  h4 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+    .underline {
+      font-size: 2rem;
+  }
+
+  canvas {
+    width: 90% !important;
+    height: 90% !important;
+  }
+
+  .btn-outline-main  {
+     font-size: 45%;
+     line-height: 1.3;
+  }
+
+  .big-button {
+    font-size: 1.2rem;
+    line-height: 1.2;
+    padding: 5px 15px;
+    border-width: 1.5px;
+  }
+
+  #welcome  {
+  	font-size: 2rem;
+  }
+
+  #glass {
+       height: 15px;
+  }
+
+  .progress-bar-success {
+      font-size: 0.8rem;
+      line-height: 10px;
+  }
+  #goal {
+    font-size: 1.3rem;
+    padding-top: 1rem;
+  }
+
+  .goal-number, .goal-label {
+    font-size: 1rem;
+  }
+
+  #countdown-wrap {
+       width: 75%;
+       height: 0;
+       padding: 0;
+  }
+
+  #fp-nav ul li a span, .fp-slidesNav ul li a span {
+      height: 4px;
+      width: 4px;
+      left: 150%;
+  }
+  #fp-nav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li a.active span, .fp-slidesNav ul li:hover a.active span {
+      height: 8px;
+      width: 8px;
+      margin: -6px 0 0 -4px;
+  }
+
+  #fp-nav ul li .fp-tooltip.right {
+      right: 5px;
+      top: 1%;
+      font-size: 8px;
+  }
+  .countdowntimewrap {
+      margin: 25px auto 15px;
+  }
+  /*
+    Mobile app
+  */
+
+  #app-intro {
+       padding: 5%;
+       font-size: 1.5rem;
+   }
+  /*
+    Dekstop platform
+  */
+  #laptop-intro {
+      font-size: 1.5rem;
+      padding-bottom: 1rem;
+      padding-left: 0px;
+  }
+
+  #laptop-img {
+      width: 100% !important;
+    }
+
+  /*
+    User interface
+  */
+  .donate-eth {
+    left: 10px;
+    top: 30px;
+    width: 400px;
+    height: 250px;
+  }
+
+  .logo-groups {
+      width: 5rem;
+      margin-left: 2px;
+    }
+
+  .triangle {
+      height: 10px;
+      width: 10px;
+      margin-bottom: -4px;
+      margin-left: -1px;
+      margin-right: -1px;
+      border-top: 1px solid;
+      border-left: 1px solid;
+  }
+
+  .side-line-1 {
+    width: 21px;
+    margin-left: 27px;
+    border-top: 1px solid;
+  }
+
+  .side-line-2 {
+    width: 290px;
+    border-top: 1px solid;
+  }
+
+  .side-line-3 {
+    margin-left: 40px;
+    margin-top: -4px;
+    margin-right: 13px;
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+  }
+
+  .title-container > div {
+      font-size: 8px;
+  }
+
+
+  #donate-title > p {
+      margin-left: 80px;
+      margin-bottom: -30px;
+      font-size: 14px;
+  }
+
+  .title-container {
+    grid-template-columns: 10px 40px 20px 75px 5px 70px 45px 50px;
+    grid-gap: 1px;
+    padding: 3px 0px;
+    margin: 0px 5px;
+  }
+
+  .checks {
+      padding-left: 15px;
+      cursor: pointer;
+      font-size: 7px;
+  }
+
+  .checkmark {
+    height: 8px;
+    width: 8px;
+    top:2px;
+    border: solid 1px rgba(211,211,211, 0.4);
+  }
+  .checks .checkmark:after {
+      border-width: 0 1px 1px 0;
+      width: 3px;
+      height: 6px;
+    }
+
+  .check-box {
+    margin-left: 2px;
+  }
+
+  .check-boxes {
+    margin-left: -150px;
+    margin-top: 30px;
+    padding-bottom: 0px;
+  }
+
+  .fullstory {
+      font-size: 6px;
+      margin-left: 105px;
+      margin-top: -7px;
+  }
+
+  .checks .checkmark:after {
+      left: 2px;
+      top: -1px;
+  }
+
+  .search-input input[type=text] {
+      font-size: 5px;
+      margin-top: 2px;
+      margin-right: 20px;
+      border: solid 1px rgba(211,211,211, 0.8);
+  }
+
+  .search-container button {
+      margin-right: -75px;
+      margin-top: -5px;
+      font-size: 8px;
+  }
+
+  .check-boxes-div {
+      padding-left: 30px;
+  }
+  .dnt-input {
+      width: 45%;
+  }
+
+  .grid-container .don-butn a {
+      padding: 0px 10px;
+      margin-left: -10px;
+      border: 1px solid rgba(211,211,211, 0.8);
+  }
+
+  .info-logo {
+      width: 1rem;
+  }
+
+  .story-1-short, .story-2-short, .story-3-short {
+      left: 188px;
+      width: 150px;
+      height: 50px;
+  }
+
+  .story-1-short {
+      top: 155px;
+  }
+
+  .story-2-short {
+    top: 166px;
+  }
+
+  .story-3-short {
+    top: 178px;
+  }
+
+  .story-paragraph {
+      font-size: 6px;
+      margin-top: -60px;
+      padding: 3px;
+  }
+
+  .story-window {
+      width: 15rem;
+  }
+
+  .transfer-activ {
+      grid-template-columns: 90px 110px 70px 70px ;
+      }
+  .buy-container {
+    grid-template-columns: 90px 110px 70px 70px ;
+  }
+  .grid-container {
+      grid-template-columns: 10px 40px 20px 75px 5px 70px 45px 50px;
+      grid-gap: 1px;
+      margin: 0px 5px;
+    }
+
+  .buy-container, .transfer-activ {
+        grid-template-columns: 65px 50px 50px 50px 20px 90px 70px 80px;
+        grid-gap: 1px;
+        margin: 0px 5px;
+      }
+
+
+  #interface-title {
+      padding: 0.5rem;
+      font-size: 1.4rem;
+      padding-bottom: 10%;
+  }
+
+  .imgInterface {
+    margin: 0.3rem;
+}
+
+  .bu, .tr, .don {
+      width: 9rem !important;
+    }
+
+  .mobile-pic {
+      width: 30% !important;
+    }
+
+    .donate-app {
+    padding-left: 2rem;
+}
+
+  .balance-pic {
+      margin-left: -48%;
+      margin-top: -5%;
+    }
+
+  .donate-pic {
+      margin-top: -60%;
+      margin-right: -55%;
+    }
+
+  .inbox-pic {
+      margin-left: -55%;
+      margin-top: -15%;
+    }
+
+  .myDonations-pic {
+      margin-left: 50%;
+      margin-top: -50%;
+    }
+
+  .imgContainer-mobile {
+      padding-left: 0;
+    }
+
+  .donate-pic, .inbox-pic, .myDonations-pic, .balance-pic  {
+      width: 45% !important;
+    }
+
+  .buy-better-token, .transfer-better-tokens {
+      width: 250px;
+      height: 240px;
+      left: 25%;
+      top: 40px;
+  }
+
+  #interface-buy, #interface-transfer {
+      padding: 2% 5%;
+      font-size: 1.7rem;
+  }
+
+  .square-1 {
+    margin-left: 15%;
+    padding-bottom: 25px;
+  }
+
+  .square-1, .square-2, .square-transfer {
+      padding-top: 1%;
+      width: 65px;
+      height: 65px;
+
+  }
+
+  .imgContainer-3 {
+    padding-left: 10%;
+}
+
+  .text-block-eth, .text-block-address {
+      font-size: 110%;
+      border-bottom: solid 1px;
+      padding-bottom: 1px;
+  }
+
+  .square-2 {
+      float: right;
+      margin-right: 15%;
+  }
+
+  .btr-input {
+      width: 100%;
+      height: 100%;
+      font-size: 12px;
+      margin-top: 16%;
+    }
+
+  .priceBtr {
+      font-size: 10px;
+      margin-left: 0;
+  }
+
+  .text-block-center {
+       font-size: 12px;
+       padding: 0;
+       margin-top: 16%;
+  }
+  .span-rows {
+    font-size: 20px;
+  }
+
+  .activities {
+    font-size: 10px;
+  }
+
+  .recent {
+      padding-bottom: 1%;
+      padding-top: 2%;
+      font-size: 10px;
+  }
+  .grid-container > div {
+      font-size: 6px;
+
+  }
+  .grid-container {
+      padding: 0px;
+  }
+
+  .proc-buy {
+      width: 20%;
+      height: 1%;
+      font-size: 10px;
+      margin: 1%;
+  }
+
+  .close {
+    width: 10px !important;
+    height: 10px !important;
+    margin-right: -8px;
+    margin-top: -8px;
+  }
+
+  .address-label {
+      padding-top: 1%;
+      width: 200px;
+      height: 50px;
+  }
+  .rectransfer {
+      padding-top: 0;
+      font-size: 0;
+  }
+  .wallin {
+    margin-top: 1%;
+  }
+
+  .transfer-activ > div {
+    font-size: 5px;
+  }
+
+  .square-transfer {
+      margin-top: 10px;
+  }
+  #interface-transfer {
+      padding: 0% 5%;
+  }
+  /*
+    Our team
+  */
+  .member-info h3 {
+     font-size: 8px;
+  }
+
+  .team-members li > div {
+     width: 25%;
+  }
+
+  .member-info {
+    transform: none;
+  }
+
+  .member-info p {
+    font-size: 8px;
+  }
+  .member-details > div:after {
+  	background-image: linear-gradient(0deg, rgba(56,165,169, 0.5) 40%, transparent 50%);
+  }
+  /*
+    Roadmap
+  */
+  .timeline-article {
+    min-height: 250px;
+  }
+  .main-timeline-section {
+      height: 250px;
+  }
+
+  .content-box {
+    width: 80px !important;
+  }
+
+  .timeline-article-bottom .content-box {
+     top: 29%;
+  }
+  .timeline-article .content-box {
+    padding: 2px;
+    left: -5px;
+    border: 1px solid rgba(56,165,169, 0.5);
+
+  }
+  .timeline-article-bottom .content-date {
+      top: 50%;
+  }
+
+  .main-timeline-section .conference-center-line {
+      height: 2px;
+  }
+
+  .sp {
+      font-size: 0.9rem;
+      margin: 5px;
+  }
+
+  .timeline-article .meta-date {
+        left: 30px;
+        width: 9px;
+        height: 9px;
+        border: 1px solid #FFF;
+  }
+
+  .main-timeline-section .timeline-start, .main-timeline-section .timeline-end {
+      width: 12px;
+      height: 12px;
+      border: 1px solid #FFF;
+    }
+
+  .timeline-article-top .content-box:before {
+      top: -25px;
+  }
+
+  .timeline-article-bottom .content-box:before {
+     bottom: -13px;
+     left: 48%;
+     border: 6px solid transparent;
+     border-top-color: rgba(56,165,169, 0.5);
+  }
+
+  .timeline-article .content-date {
+     left: 12px;
+    }
+
+  .timeline-article-top .content-box:before {
+      border: 6px solid transparent;
+      border-bottom-color: rgba(56,165,169, 0.5);
+      top: -13px;
+  }
+  /*
+    Whitepaper
+  */
+  #white {
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+  }
+  /*
+    Press
+  */
+  .nlogo {
+      height: 45px !important;
+  }
+
+  .news-logo {
+    padding: 10px;
+  }
+  /*
+    Contacts
+  */
+  .form-control {
+        height: 15px;
+        padding: 0px 0px;
+        font-size: 1.0rem;
+        line-height: 1.0;
+  }
+
+  .email-button {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 3px 15px;
+    border-width: 1px;
+  }
+
+  .contact-us {
+        display: inline-block;
+        text-align: center;
+  }
+
+  .form-group {
+      margin-bottom: 10px;
+  }
+
+  .col-md-12 {
+      width: 70%;
+      margin-left: 15%;
+  }
+
+  .form-group .form-control:focus {
+    border-width: 0 0 1px 0;
+  }
+  /*
+    All elements
+  */
+   * {
+     font-size: 90%;
+   }
+  h4 {
+    font-size: 70%;
+  }
+
+  p {
+    font-size: 7px;
+  }
+
+  .wow {
+    font-size: 1.5rem;
+  }
+
+  .col-xs-12.col-sm-12.col-md-12.col-lg-12 {
+      padding: 0 0% 0 0%;
+  }
+
+  }
