@@ -2899,20 +2899,14 @@ p {
   }
 
   #fp-nav ul li a span, .fp-slidesNav ul li a span {
-      height: 4px;
-      width: 4px;
-      left: 150%;
+      display: none;
   }
   #fp-nav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li a.active span, .fp-slidesNav ul li:hover a.active span {
-      height: 8px;
-      width: 8px;
-      margin: -6px 0 0 -4px;
+      display: none;
   }
 
   #fp-nav ul li .fp-tooltip.right {
-      right: 5px;
-      top: 1%;
-      font-size: 8px;
+      display: none;
   }
   .countdowntimewrap {
       margin: 25px auto 15px;
@@ -3313,15 +3307,15 @@ p {
   }
 
   .content-box {
-    width: 80px !important;
+    width: 75px !important;
   }
 
   .timeline-article-bottom .content-box {
      top: 29%;
   }
   .timeline-article .content-box {
-    padding: 2px;
-    left: -5px;
+    padding: 0px;
+    left: -3px;
     border: 1px solid rgba(56,165,169, 0.5);
 
   }
@@ -3334,8 +3328,8 @@ p {
   }
 
   .sp {
-      font-size: 0.9rem;
-      margin: 5px;
+      font-size: 7px;
+      margin: 2px;
   }
 
   .timeline-article .meta-date {
@@ -3363,7 +3357,7 @@ p {
   }
 
   .timeline-article .content-date {
-     left: 12px;
+     left: 20px;
     }
 
   .timeline-article-top .content-box:before {
@@ -3415,8 +3409,12 @@ p {
   }
 
   .col-md-12 {
-      width: 70%;
-      margin-left: 15%;
+      width: 90%;
+      margin-left: 3%;
+  }
+
+  .form-control {
+    width: 90%;
   }
 
   .form-group .form-control:focus {
@@ -3441,7 +3439,9 @@ p {
   }
 
   .col-xs-12.col-sm-12.col-md-12.col-lg-12 {
-      padding: 0 0% 0 0%;
+      padding: 0 0% 0 15%;
   }
+
+
 
   }
