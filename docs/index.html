@@ -18,13 +18,13 @@
   <link href="css/page.css" rel="stylesheet">
 </head>
 
-<header id="header-fixed">
+<header id="header-fixed" >
       <div id="cssmenu">
         <div id="logo"><img src="./img/a/logo.png" id="better-logo" alt="BetterWorld logo" ></div>
         <div id="left-side">
           <h4>Your Balance: <span id="accountBalance"></span>, BetterTokens: <span id="tokenBalance"> </span> </h4>
         </div>
-        <nav>
+        <nav class="socialsNav">
           <a href="#" class="fb" title="Join us on Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
           <a href="#" class="tw" title="Join us on Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
           <a href="#" class="insta" title="Join us on Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
@@ -35,10 +35,29 @@
           <button type="button" class="btn btn-outline-main" data-toggle="modal" data-target="#registerModal">Whitelist</button>
           <button type="button" class="btn btn-outline-main" data-toggle="modal" data-target="#loginModal">Login</button>
         </nav>
+
+        <nav class="mobileMenu">
+          <a href="#" class="mobileMenu__button" id="mobileMenu-button">
+            <span class="mobileMenu__button__icon"></span>
+          </a>
+          <ul class="mobileMenu__menu">
+            <li id="navH"><a href="#">Home</a></li>
+            <li id="navM"><a href="#">Mobile App</a></li>
+            <li id="navD"><a href="#">Desktop platform </a></li>
+            <li id="navU"><a href="#">User Interface</a></li>
+            <li id="navO"><a href="#">Our Team</a></li>
+            <li id="navR"><a href="#">Roadmap</a></li>
+            <li id="navW"><a href="#">Whitepaper</a></li>
+            <li id="navP"><a href="#">Press</a></li>
+            <li id="navC"><a href="#">Contacts</a></li>
+          </ul>
+        </nav>
+
       </div>
 </header>
 
 <body>
+
   <container id="fullpage">
 
       <section id="section1-background">

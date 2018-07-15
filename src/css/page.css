@@ -1,3 +1,7 @@
+.mobileMenu {
+  display: none;
+}
+
 .footer {
   position: absolute;
   left: 0;
@@ -1158,6 +1162,9 @@ text-decoration: none;
   /*
     Home page
   */
+
+
+
 #better-logo {
     width: 3%;
     float: left;
@@ -1670,6 +1677,8 @@ p {
   .inbox-pic {
     margin-left: 25%;
   }
+
+
 }
 
 
@@ -1683,6 +1692,8 @@ p {
   /*
     Home page
   */
+
+
 #better-logo {
       width: 3%;
       float: left;
@@ -2202,6 +2213,7 @@ p {
   /*
     Home page
   */
+
 #better-logo {
       width: 2%;
       float: left;
@@ -2818,6 +2830,126 @@ p {
     /*
       Home page
     */
+
+    .socialsNav {
+      display: none;
+    }
+
+        /*
+          Mobile menu
+        */
+
+
+    .mobileMenu {
+      display: inline;
+    }
+    .mobileMenu {
+      position: fixed;
+      top: 20px;
+      left: 10px;
+    }
+    .mobileMenu__button {
+      display: block;
+      position: relative;
+      width: 25px;
+      height: 35px;
+      text-align: center;
+      vertical-align: middle;
+      transition: all 0.5s ease;
+      border: 2px solid transparent;
+      box-shadow: 0px 0px 8px -2px #333;
+    }
+
+    .mobileMenu__button.open {
+      box-shadow: none;
+    }
+    .mobileMenu__button__icon {
+      display: inline-block;
+      position: absolute;
+      background: rgba(211,211,211, 0.8);
+      margin: 0 auto;
+      width: 20px;
+      height: 2px;
+      top: 50%;
+      left: 0;
+      right: 0;
+      transition: all 0.5s ease;
+      transform: translateY(-1px);
+    }
+
+    .mobileMenu__button__icon:before,
+    .mobileMenu__button__icon:after {
+      content: "";
+      position: absolute;
+      margin: 0 auto;
+      background: rgba(211,211,211, 0.8);
+      width: 20px;
+      height: 2px;
+      left: 0;
+      right: 0;
+      transition: all 0.5s ease;
+    }
+    .mobileMenu__button__icon:before {
+      bottom: 10px;
+    }
+    .mobileMenu__button__icon:after {
+      top: 10px;
+    }
+    .mobileMenu__button.open .mobileMenu__button__icon {
+      background: transparent;
+    }
+    .mobileMenu__button.open .mobileMenu__button__icon:before,
+    .mobileMenu__button.open .mobileMenu__button__icon:after {
+      transform-origin: 0 50%;
+      width: 28.28427125px;
+    }
+    .mobileMenu__button.open .mobileMenu__button__icon:before {
+      transform: rotateZ(0.78539816rad);
+    }
+    .mobileMenu__button.open .mobileMenu__button__icon:after {
+      transform: rotateZ(-0.78539816rad);
+    }
+
+    .mobileMenu__menu {
+      list-style-type: none;
+      padding: 0 0 0 20px;
+    }
+
+    .mobileMenu__menu li {
+      display: block;
+      white-space: nowrap;
+      position: relative;
+      visibility: hidden;
+      transition: all 0.5s ease;
+      transform: translateX(-400px);
+    }
+
+    .mobileMenu__menu a {
+      display: block;
+      text-decoration: none;
+      color: rgba(211,211,211, 0.8);
+      font-size: 1.5rem;
+      font-weight: normal;
+      transition: all 0.4s ease;
+      text-align: right;
+      background: rgb(26,28,29);
+      padding: 0px 15%;
+      margin-left: -25%;
+      width: auto;
+      border-right: solid 1px rgba(56,165,169, 0.5);
+    }
+
+    .mobileMenu__menu a:hover {
+      font-weight: bold;
+      margin-right: -5%;
+    }
+
+    .mobileMenu__button.open + .mobileMenu__menu li {
+      transform: translateX(0);
+      visibility: visible;
+    }
+
+
     #section1-background{
     background-size: auto;
     }
@@ -2826,7 +2958,7 @@ p {
     }
 
   #better-logo {
-        width: 2%;
+        width: 4%;
         float: left;
         margin-right: 5px;
         margin-top: 4px;
@@ -3164,8 +3296,8 @@ p {
   .buy-better-token, .transfer-better-tokens {
       width: 250px;
       height: 240px;
-      left: 25%;
-      top: 40px;
+      left: 10%;
+      top: 60px;
   }
 
   #interface-buy, #interface-transfer {
@@ -3427,7 +3559,7 @@ p {
      font-size: 90%;
    }
   h4 {
-    font-size: 70%;
+    font-size: 80%;
   }
 
   p {

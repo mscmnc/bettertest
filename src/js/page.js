@@ -280,3 +280,68 @@ $('.story-2').click(function(){
  $('.story-3').click(function(){
     $('.story-3-short').toggle();
  });
+
+ // Mobile menu
+ let mobileMenu = document.getElementById("mobileMenu-button");
+
+ mobileMenu.addEventListener("click", (e) => {
+   e.preventDefault();
+   document.body.classList.toggle("open");
+   mobileMenu.classList.toggle("open");
+ });
+
+
+ $("#navH").click(function() {
+     $('html,body').animate({
+         scrollTop: $("#section1-background").offset().top},
+         'slow');
+
+ });
+
+
+ $("#navM").click(function() {
+     $('html,body').animate({
+         scrollTop: $("#section2-background").offset().top},
+         'slow');
+ });
+
+ $("#navD").click(function() {
+     $('html,body').animate({
+         scrollTop: $("#section3-background").offset().top},
+         'slow');
+ });
+
+ $("#navU").click(function() {
+     $('html,body').animate({
+         scrollTop: $("#section4-background").offset().top},
+         'slow');
+ });
+
+ $("#navO").click(function() {
+     $('html,body').animate({
+         scrollTop: $("#section5-background").offset().top},
+         'slow');
+ });
+
+ $("#navR").click(function() {
+     $('html,body').animate({
+         scrollTop: $("#section6-background").offset().top},
+         'slow');
+ });
+
+ $("#navW").click(function() {
+     $('html,body').animate({
+         scrollTop: $("#section7-background").offset().top},
+         'slow');
+
+ }); $("#navP").click(function() {
+      $('html,body').animate({
+          scrollTop: $("#section8-background").offset().top},
+          'slow');
+  });
+
+$("#navC").click(function() {
+ $('html,body').animate({
+   scrollTop: $("#section9-background").offset().top},
+   'slow');
+ });
